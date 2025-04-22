@@ -268,3 +268,68 @@
     color: #888;
     font-size: 0.8rem;
 }
+
+/* Facility  */
+.facility-nav-item {
+    position: relative;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.facility-nav-item:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facility-nav-item.active {
+    border-left: 4px solid #198754;
+}
+
+.facility-nav-item.active span {
+    color: #198754;
+    font-weight: 500;
+}
+
+.circle-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facility-content {
+    display: none;
+}
+
+.facility-content.active {
+    display: flex;
+}
+
+.btn-details {
+    color: #0d6efd;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-details:hover {
+    text-decoration: underline;
+}
+
+.section-header {
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
