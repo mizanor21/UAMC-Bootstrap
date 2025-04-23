@@ -40,6 +40,137 @@
     color: #0d6efd;
 }
 
+/* hero sectioin  */
+ /* Custom styles */
+ .hero-slider {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 85vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-nav .nav-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    width: 50px;
+    margin: 0 15px;
+}
+
+.slider-nav .page-indicator button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.slider-nav .page-indicator button:last-child {
+    border-right: none;
+}
+
+.slider-nav .page-indicator button.active {
+    color: #ffc107;
+}
+
+.cta-btn {
+    background-color: #0d6efd;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: white;
+    color: #0d6efd;
+}
+
+.degree-section {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+    width: 350px;
+    color: white;
+    text-align: left;
+    z-index: 10;
+}
+
+.degree-item {
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.degree-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.degree-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.degree-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.education-highlight {
+    color: #ffc107;
+}
+
+.header-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+    .degree-section {
+        display: none;
+    }
+    
+    .slider-nav {
+        top: 20px;
+    }
+    
+    .slider-nav .nav-divider {
+        display: none;
+    }
+}
+
 /* notice section  */
 .tab-container {
     background-color: #f0f1f7;
