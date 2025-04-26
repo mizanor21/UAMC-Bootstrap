@@ -30,7 +30,7 @@
     ------------------------------- -->
 
     <!-- Top information bar -->
-    <div class="top-info py-2" style="border-bottom: 1px dashed #dee2e6;">
+    <!-- <div class="top-info py-2" style="border-bottom: 1px dashed #dee2e6;">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="address d-flex align-items-center">
@@ -41,7 +41,7 @@
                     <a href="mailto:info@uamc.com"><i class="fas fa-envelope me-2"></i>info@uamc.com</a>
                     <a href="tel:+4801700220000" class="ms-3"><i class="fas fa-phone me-2"></i>+480 1700-220000</a>
                 </div>
-                <!-- Quick links bar -->
+                Quick links bar
                 <div class="quick-links py-2 ">
                     <div class="container">
                         <div class="d-flex justify-content-end">
@@ -55,49 +55,74 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Main navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+    </div> -->
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <div class="d-flex ">
-                <a class="" href="/index.html">
-                    <img src="assets/logo/logo.png" alt="UAMC Logo" width="75" height="75"
-                        class="d-inline-block align-text-top me-2">
-                </a>
-                <span class="d-flex flex-column justify-content-center">
-                    <h4 class="mb-0">Uttara Adhunik</h4>
-                    Medical College (UAMC)
-                </span>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/assets/logo/logo.png" alt="UAMC" class="me-2">
+                <div>
+                    <h5 class="mb-0">Uttara Adhunik</h5>
+                    <small>Medical College (UAMC)</small>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Home Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT UAMC</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT UAMC
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/overview">Overview</a></li>
+                            <li><a class="dropdown-item" href="/history-uamc">History of UAMC</a></li>
+                            <li><a class="dropdown-item" href="/vision-mission">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="/aim-objective">Aim & Objective</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/founder-members">Founder Members</a></li>
+                            <li><a class="dropdown-item" href="/ec-members">EC Members</a></li>
+                            <li><a class="dropdown-item" href="/gb-members">GB Members</a></li>
+                        </ul>
                     </li>
+                    
+                    <!-- Facilities Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FACILITIES</a>
+                        <a class="nav-link" href="/facilities">FACILITIES</a>
                     </li>
+                    
+                    <!-- Admission Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ADMISSION</a>
+                        <a class="nav-link" href="/admission">ADMISSION</a>
                     </li>
+                    
+                    <!-- Notice & Media Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">NOTICE & MEDIA</a>
+                        <a class="nav-link" href="/notice-media">NOTICE & MEDIA</a>
                     </li>
+                    
+                    <!-- Career Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CAREER</a>
+                        <a class="nav-link" href="/career">CAREER</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- -------------------------------
             Hero Section Start
     ------------------------------- -->
@@ -542,7 +567,7 @@
                 About UAMC Start
     ------------------------------- -->
     <div class="container my-5">
-        <div class="d-flex align-items-center">
+        <div class="d-md-flex align-items-center">
             <!-- Left side images with logo overlay -->
             <!-- Left Side - Images -->
             <div class="col-12 col-md-6 d-flex flex-column align-items-center">
@@ -562,7 +587,7 @@
 
             <!-- Right side content -->
             <div class="col-md-7 d-flex flex-column justify-content-center ps-md-5">
-                <div class="text-accent fw-bold mb-2">KNOWLEDGE MEETS INNOVATION</div>
+                <div class="text-accent fw-bold mt-5 mb-2">KNOWLEDGE MEETS INNOVATION</div>
 
                 <h1 class="display-4 fw-bold mb-4">About <span class="text-highlight">UAMC</span></h1>
 
@@ -597,7 +622,7 @@
     <div class="feature-container">
         <div class="bg-overlay"></div>
 
-        <div class="stats-box d-flex flex-column flex-md-row justify-content-between align-items-center gap-5 gap-lg-0">
+        <div class="stats-box d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Stat 1 -->
             <div class="stat-item  border-md-right pb-4 pb-md-0">
                 <h2 class="stat-title">90%</h2>
@@ -1199,7 +1224,7 @@
             Principle Message Start
     ------------------------------- -->
     <div class="bg-success bg-opacity-10 ">
-        <div class="container py-lg-5">
+        <div class="container py-5">
             <!-- Header with icon and text -->
             <div class="d-flex align-items-center justify-content-center gap-2 text-success mb-4">
                 <svg class="bi bi-mortarboard-fill" width="24" height="24" fill="currentColor" viewBox="0 0 20 20"
@@ -1471,37 +1496,31 @@
     <section class="py-5 bg-white">
         <div class="container px-4">
             <!-- Header -->
-            <div class="d-flex justify-content-between align-items-center mb-5">
-                <div>
+            <div class="">
+                <div class="d-flex align-items-center justify-content-between ">
                     <h2 class="fs-1 fw-bold text-success">
                         Read Our Latest News
                     </h2>
-                    <p class="text-secondary mt-3">
-                        You'll find something to spark your curiosity and enhance your
-                        knowledge.
-                    </p>
+                    <a href="#" class="text-success d-flex align-items-center text-decoration-none fw-semibold">
+                        View All <i class="fa-solid fa-arrow-right-long ms-2 fs-5" style="transform: rotate(-45deg);"></i>
+                    </a>
                 </div>
-
-                <a href="#" class="btn btn-outline-success d-flex align-items-center gap-2">
-                    View all
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                        class="bi bi-arrow-right-circle" viewBox="0 0 16 16" style="transform: rotate(-45deg);">
-                        <path fill-rule="evenodd"
-                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-                    </svg>
-                </a>
+                <p class="text-secondary">
+                    You'll find something to spark your curiosity and enhance your
+                    knowledge.
+                </p>
             </div>
 
             <!-- News Grid -->
             <div class="row g-4">
                 <!-- First News Article -->
                 <div class="col-12 col-lg-6">
-                    <div class="card bg-white h-100">
-                        <div class="d-md-flex gap-3 border border-success p-3 border-dashed">
+                    <div class=" bg-white h-100" style="border: 1px dashed #28A745;">
+                        <div class="d-md-flex gap-3  p-3 ">
                             <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png"
                                 alt="Those inequalities are inequalities" class="w-100 w-md-25 h-auto"
                                 style="max-height: 240px; object-fit: cover;" />
-                            <div class="card-body d-flex flex-column gap-3 p-3">
+                            <div class="card-body d-flex flex-column gap-3 py-3">
                                 <span class="badge bg-warning text-dark px-3 py-2 d-inline-block">
                                     Education
                                 </span>
@@ -1536,12 +1555,12 @@
 
                 <!-- Second News Article -->
                 <div class="col-12 col-lg-6">
-                    <div class="card bg-white h-100">
-                        <div class="d-md-flex gap-3 border border-success p-3 border-dashed">
+                    <div class=" bg-white h-100" style="border: 1px dashed #28A745;">
+                        <div class="d-md-flex gap-3 p-3">
                             <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png"
                                 alt="After Decades Of Improvement" class="w-100 w-md-25 h-auto"
                                 style="max-height: 240px; object-fit: cover;" />
-                            <div class="card-body d-flex flex-column gap-3 p-3">
+                            <div class="card-body d-flex flex-column gap-3 py-3">
                                 <span class="badge bg-warning text-dark px-3 py-2 d-inline-block">
                                     University
                                 </span>
