@@ -105,6 +105,53 @@
     }
 }
 
+/* notice section  */
+.tab-container {
+    background-color: #f0f1f7;
+    border-radius: 8px;
+  }
+  .custom-tab {
+    background: transparent;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0;
+  }
+  .custom-tab.active {
+    background-color: white;
+    border-bottom: 4px solid #00914a;
+  }
+  .notice-item {
+    background-color: #f0f1f7;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .date-badge {
+    background-color: #00914a;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+  }
+  .day-number {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .view-all {
+    color: #00914a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .view-all:hover {
+    text-decoration: underline;
+  }
+  .main-title {
+    color: #00914a;
+    font-weight: bold;
+    font-size: 32px;
+  }
+
 /* footer  */
 .footer-top {
     background-color: #000;
