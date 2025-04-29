@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttara Adhunik Medical College</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="/styles/notice.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            --primary-color: #0d6efd;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand h5 {
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: 0.2rem;
+        }
+        
+        .navbar-brand small {
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+            padding: 0.5rem 1rem !important;
+            color: #333 !important;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover, .nav-link:focus {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            right: 1rem;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .dropdown-menu {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 220px;
+        }
+        
+        .dropdown-item {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            padding: 0.65rem 1.25rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover, .dropdown-item:focus {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
+            color: var(--primary-color) !important;
+            transform: translateX(5px);
+        }
+        
+        .dropdown-toggle::after {
+            transition: transform 0.2s ease;
+        }
+        
+        .show > .dropdown-toggle::after {
+            transform: rotate(-180deg);
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: var(--glass-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 0 0 12px 12px;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                box-shadow: var(--glass-shadow);
+            }
+            
+            .dropdown-menu {
+                background: rgba(255, 255, 255, 0.95);
+                margin-left: 1rem;
+                border-left: 3px solid var(--primary-color);
+                box-shadow: none;
+            }
+            
+            .nav-link {
+                padding: 0.5rem 0 !important;
+            }
+        }
+        
+        /* Logo sizing */
+        .navbar-brand img {
+            width: clamp(50px, 5vw, 60px);
+            height: auto;
+        }
+
+
+       /* admission papers  */
+
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .page-title {
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .page-subtitle {
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #444;
+            border-left: 4px solid #0e8a3e;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+        .notices-table {
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+        .notices-table th {
+            background-color: #f0f7f3;
+            font-weight: 600;
+            color: #444;
+        }
+        .notices-table td {
+            vertical-align: middle;
+        }
+        .table-light-green {
+            background-color: #f0f9f0;
+        }
+        .notice-date {
+            color: #666;
+            font-weight: 500;
+        }
+        .download-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e6f4ec;
+            color: #0e8a3e;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #0e8a3e;
+            color: white;
+        }
+        .share-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9f0f3;
+            color: #248cd1;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .share-btn:hover {
+            background-color: #248cd1;
+            color: white;
+        }
+        .action-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .important-note {
+            border-left: 4px solid #0e8a3e;
+            padding: 12px 20px;
+            background-color: #f9f9f9;
+            margin: 30px 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/assets/logo/logo.png" alt="UAMC" class="me-2">
+                <div>
+                    <h5 class="mb-0">Uttara Adhunik</h5>
+                    <small>Medical College (UAMC)</small>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Home Link -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">HOME</a>
+                    </li>
+                    
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT UAMC
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
+                            <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
+                            <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
+                            <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Facilities Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/facilities">FACILITIES</a>
+                    </li>
+                    
+                    <!-- Admission Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admission">ADMISSION</a>
+                    </li>
+                    
+                    <!-- Notice & Media Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NOTICE & MEDIA</a>
+                    </li>
+                    
+                    <!-- Career Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/career">CAREER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner-section" style="margin-top: 75px;">
+        <div class="banner-overlay ">
+            <div class="container">
+                <div class="row align-items-end">
+                  <div class="col-md-8 mb-md-0">
+                    <p class="breadcrumb-text">
+                        <a href="/" class="text-decoration-none text-secondary ">Home</a> 
+                        <span class="text-muted">&gt;</span> 
+                        <span class="text-primary">Admission Form</span>
+                    </p>
+                    <h1 class="banner-title">Admission UAMC</h1>
+                  </div>
+                  <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                    <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="row justify-content-center py-5">
+          <div class="col-12">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Procedure</a>
+              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Papers</a>
+              <a href="#" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Application Form</a>
+              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Results</a>
+              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Online Registration</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- admission papers  -->
+
+    <div class="" style="background-color: white;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Admission Form</h1>
+                    <p class="page-subtitle">MBBS Admission Form</p>
+                    
+                    <div class="">
+                        <div class="card-body">
+                            <h2 class="section-heading">Recent Admission Notices & Required Documents</h2>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-bordered notices-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="8%">No.</th>
+                                            <th width="15%">Date</th>
+                                            <th width="60%">Title</th>
+                                            <th width="17%">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td class="notice-date">April 9, 2025</td>
+                                            <td>Necessary Documents for MBBS Admission (Session: 2024-2025)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-light-green">
+                                            <td>02</td>
+                                            <td class="notice-date">April 5, 2025</td>
+                                            <td>Admission Notice in MBBS Course (Session: 2024-2025) for Private Medical Colleges</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="important-note">
+                                <p class="mb-0"><strong>Note:</strong> All applicants are advised to check the latest official notices on the Directorate General of Medical Education (DGME) website for up-to-date admission instructions and required documents.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+                Footer Start
+    ------------------------------- -->
+    <footer>
+        <!-- Newsletter Section -->
+        <div class="newsletter-section bg-black text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2>Subscribe To Newsletter</h2>
+                    </div>
+                    <div class="col-md-5">
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter Your mail">
+                            <button class="submit-btn px-4 py-3 d-flex align-items-center gap-2" type="submit">Submit <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Main Content -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- College Info -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="/assets/logo/logo.png" alt="Uttara Adhunik Medical College Logo" width="60">
+                            <div class="ms-3">
+                                <h5 class="mb-0">Uttara Adhunik</h5>
+                                <p class="mb-0">Medical College (UAMC)</p>
+                            </div>
+                        </div>
+                        <p>We are passionate education dedicated to providing high-quality resources learners all
+                            backgrounds.</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Uttara, Dhaka, Bangladesh</p>
+                        <p><i class="fas fa-phone me-2"></i> 485-826-710</p>
+                    </div>
+
+                    <!-- Our Campus -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Campus</h5>
+                        <div class="footer-links">
+                            <a href="#">Academic</a>
+                            <a href="#">Athletics</a>
+                            <a href="#">Campus life</a>
+                            <a href="#">Research</a>
+                            <a href="#">Academic Area</a>
+                        </div>
+                    </div>
+
+                    <!-- Our Pages -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Pages</h5>
+                        <div class="footer-links">
+                            <a href="#">About</a>
+                            <a href="#">Tution Fee</a>
+                            <a href="#">Alumni</a>
+                            <a href="#">Faculty Staff</a>
+                            <a href="#">Event</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">Recent Posts</h5>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> August 6, 2024
+                                </div>
+                                <h6>Those Inequalities Are Inequalities That</h6>
+                            </div>
+                        </div>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> July 4, 2024
+                                </div>
+                                <h6>After Decades Of Improvement, Cardiovascular</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom / Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">Copyright @ <span id="currentYear"></span>. All Rights Reserved by <a href="#"
+                                class="text-white">UAMC</a></p>
+                        <script>
+                            document.getElementById('currentYear').textContent = new Date().getFullYear();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth scroll and active link highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update active link on scroll
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add your logic to determine which link should be active
+                // This is a simplified version - you'll need to implement
+                // your own logic based on your page sections
+                document.querySelector('.nav-link[href="/"]').classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
