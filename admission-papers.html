@@ -138,106 +138,97 @@
         }
 
 
-        /* contact section styles  */
-        :root {
-            --primary-color: #0a8c3a;
-            --light-bg: #e8f5ec;
-        }
-        
-        body {
+       /* admission papers  */
+
+       body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
-        .contact-section {
-            padding: 50px 0;
+        .page-title {
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
         }
-        
-        .contact-info-card {
-            background-color: var(--light-bg);
-            border-radius: 10px;
-            padding: 30px;
-            height: 100%;
+        .page-subtitle {
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
         }
-        
-        .contact-title {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 30px;
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #444;
+            border-left: 4px solid #0e8a3e;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            margin-top: 40px;
         }
-        
-        .contact-title::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 6px;
-            background-color: var(--primary-color);
-            border-radius: 3px;
+        .notices-table {
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
         }
-        
-        .form-control {
-            background-color: var(--light-bg);
-            border: none;
-            border-radius: 5px;
-            padding: 12px 15px;
+        .notices-table th {
+            background-color: #f0f7f3;
+            font-weight: 600;
+            color: #444;
         }
-        
-        .input-icon {
-            position: relative;
+        .notices-table td {
+            vertical-align: middle;
         }
-        
-        .input-icon i {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 15px;
-            color: #6c757d;
+        .table-light-green {
+            background-color: #f0f9f0;
         }
-        
-        .input-icon .form-control {
-            padding-left: 45px;
-        }
-        
-        .submit-btn {
-            background-color: var(--primary-color);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            color: white;
+        .notice-date {
+            color: #666;
             font-weight: 500;
-            transition: all 0.3s;
+        }
+        .download-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e6f4ec;
+            color: #0e8a3e;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #0e8a3e;
+            color: white;
+        }
+        .share-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9f0f3;
+            color: #248cd1;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .share-btn:hover {
+            background-color: #248cd1;
+            color: white;
+        }
+        .action-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .important-note {
+            border-left: 4px solid #0e8a3e;
+            padding: 12px 20px;
+            background-color: #f9f9f9;
+            margin: 30px 0;
+            font-size: 0.95rem;
+            color: #555;
         }
         
-        .submit-btn:hover {
-            background-color: #076b2c;
-            transform: translateY(-2px);
-        }
-        
-        .social-icons a {
-            color: #333;
-            font-size: 1.2rem;
-            margin-right: 15px;
-            transition: color 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: var(--primary-color);
-        }
-        
-        .required-field::after {
-            content: " *";
-            color: red;
-        }
-        
-        .arrow-icon {
-            margin-left: 8px;
-        }
-        
-        @media (max-width: 768px) {
-            .contact-info-card {
-                margin-bottom: 30px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -318,9 +309,9 @@
                     <p class="breadcrumb-text">
                         <a href="/" class="text-decoration-none text-secondary ">Home</a> 
                         <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Contact Us</span>
+                        <span class="text-primary">Admission Papers</span>
                     </p>
-                    <h1 class="banner-title">Contact With UAMC</h1>
+                    <h1 class="banner-title">Admission UAMC</h1>
                   </div>
                   <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
                     <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
@@ -335,8 +326,8 @@
         <div class="row justify-content-center py-5">
           <div class="col-12">
             <div class="d-flex flex-wrap justify-content-center gap-3">
-              <a href="#" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Admission Procedure</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Papers</a>
+              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Procedure</a>
+              <a href="#" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Admission Papers</a>
               <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Application Form</a>
               <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission Results</a>
               <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Online Registration</a>
@@ -344,98 +335,180 @@
           </div>
         </div>
     </div>
-    <!-- Contact Section -->
-    <div class="container contact-section">
-        <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="contact-info-card">
-                    <h3 class="text-success mb-4">Contact Information</h3>
+    
+    <!-- admission papers  -->
+
+    <div class="" style="background-color: white;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Admission Papers & Notices</h1>
+                    <p class="page-subtitle">MBBS Admission – Session 2024-2025</p>
                     
-                    <div class="mb-4">
-                        <h5>Phone No:</h5>
-                        <p class="text-muted">0255080711</p>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h5>Email:</h5>
-                        <p class="text-muted">uamcoffice08@ahoo.com</p>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h5>Location:</h5>
-                        <p class="text-muted">H # 34, R # 4, Sector # 9, Sonargaon Janapath, Uttara Model Town</p>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h5>Open Hours:</h5>
-                        <p class="text-muted mb-1">Monday - Friday: 8:00 am - 5:00 pm</p>
-                        <p class="text-muted">Saturday - Sunday: 8:00 am - 5:00 pm</p>
-                    </div>
-                    
-                    <div>
-                        <h5>Social Media:</h5>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="">
+                        <div class="card-body">
+                            <h2 class="section-heading">Recent Admission Notices & Required Documents</h2>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-bordered notices-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="8%">No.</th>
+                                            <th width="15%">Date</th>
+                                            <th width="60%">Title</th>
+                                            <th width="17%">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td class="notice-date">April 9, 2025</td>
+                                            <td>Necessary Documents for MBBS Admission (Session: 2024-2025)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-light-green">
+                                            <td>02</td>
+                                            <td class="notice-date">April 5, 2025</td>
+                                            <td>Admission Notice in MBBS Course (Session: 2024-2025) for Private Medical Colleges</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td class="notice-date">Jan 25, 2025</td>
+                                            <td>Necessary Documents for Admission in MBBS Course (Session: 2023-2024)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-light-green">
+                                            <td>04</td>
+                                            <td class="notice-date">Feb 19, 2024</td>
+                                            <td>Admission Notice in MBBS Course (Session: 2023-2024)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td class="notice-date">Feb 16, 2024</td>
+                                            <td>Notice of MBBS Admission (Session: 2022-2023)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-light-green">
+                                            <td>06</td>
+                                            <td class="notice-date">June 30, 2023</td>
+                                            <td>Necessary Documents for Admission in MBBS Course (Session: 2023-2024)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>07</td>
+                                            <td class="notice-date">June 25, 2023</td>
+                                            <td>Govt. Circular for MBBS Admission 2023 in Private Medical Colleges</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-light-green">
+                                            <td>08</td>
+                                            <td class="notice-date">June 6, 2023</td>
+                                            <td>Necessary Documents to Submit Application</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>09</td>
+                                            <td class="notice-date">June 5, 2021</td>
+                                            <td>Admission Circular (Govt. Notice)</td>
+                                            <td>
+                                                <div class="action-btns">
+                                                    <button class="download-btn" title="Download">
+                                                        <i class="fas fa-download"></i>
+                                                    </button>
+                                                    <button class="share-btn" title="Share">
+                                                        <i class="fas fa-share-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="important-note">
+                                <p class="mb-0"><strong>Note:</strong> All applicants are advised to check the latest official notices on the Directorate General of Medical Education (DGME) website for up-to-date admission instructions and required documents.</p>
+                            </div>
+                            
+                            <div class="text-center mt-5">
+                                <a href="#" class="btn btn-success">Download Admission Form</a>
+                                <a href="#" class="btn btn-outline-success ms-3">Contact Admission Office</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-8">
-                <div class="ps-lg-4">
-                    <h2 class="contact-title">Keep In Touch, We Want To Hear From You - Send Us Message</h2>
-                    
-                    <form>
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <label for="firstName" class="form-label required-field">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="lastName" class="form-label required-field">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
-                            </div>
-                        </div>
-                        
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <label for="email" class="form-label required-field">Email</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Valid Email Address">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="phone" class="form-label required-field">Phone Number</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" class="form-control" id="phone" placeholder="Enter Your Valid Contact Number">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="message" class="form-label">Write your Message Here</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..."></textarea>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="privacyCheck">
-                                <label class="form-check-label" for="privacyCheck">
-                                    By submitting this form, you agree to the UAMC privacy notice.
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            Send you message
-                            <i class="fas fa-arrow-right arrow-icon"></i>
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
