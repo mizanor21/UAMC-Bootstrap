@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttara Adhunik Medical College</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/notice.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            --primary-color: #0d6efd;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand h5 {
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: 0.2rem;
+        }
+
+        .navbar-brand small {
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+            padding: 0.5rem 1rem !important;
+            color: #333 !important;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            right: 1rem;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .dropdown-menu {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 220px;
+        }
+
+        .dropdown-item {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            padding: 0.65rem 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
+            color: var(--primary-color) !important;
+            transform: translateX(5px);
+        }
+
+        .dropdown-toggle::after {
+            transition: transform 0.2s ease;
+        }
+
+        .show>.dropdown-toggle::after {
+            transform: rotate(-180deg);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: var(--glass-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 0 0 12px 12px;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                box-shadow: var(--glass-shadow);
+            }
+
+            .dropdown-menu {
+                background: rgba(255, 255, 255, 0.95);
+                margin-left: 1rem;
+                border-left: 3px solid var(--primary-color);
+                box-shadow: none;
+            }
+
+            .nav-link {
+                padding: 0.5rem 0 !important;
+            }
+        }
+
+        /* Logo sizing */
+        .navbar-brand img {
+            width: clamp(50px, 5vw, 60px);
+            height: auto;
+        }
+
+        /* admission procedure */
+
+        .header-section {
+            background-color: #e8f4ee;
+            padding: 50px 0;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        .college-title {
+            font-weight: 700;
+        }
+
+        .heading-admission {
+            color: #0e8a3e;
+            font-weight: bold;
+            font-size: 2.8rem;
+        }
+
+        .heading-fees {
+            color: #000;
+            font-weight: bold;
+            font-size: 2.8rem;
+        }
+
+        .hospital-icon {
+            color: #0e8a3e;
+            font-size: 3.5rem;
+        }
+
+        .hospital-icon-bg {
+            background-color: #e8f4ee;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .admission-banner {
+            position: relative;
+            /* margin-top: 30px; */
+        }
+
+        .admission-label {
+            position: absolute;
+            bottom: 35%;
+            right: 0%;
+            background-color: #ffd500;
+            padding: 40px 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #444;
+            border-left: 4px solid #0e8a3e;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        .eligibility-section {
+            margin-bottom: 10px;
+        }
+        .eligibility-title {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .eligibility-text {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .selection-section {
+            margin-bottom: 15px;
+        }
+        .selection-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        ul.admission-list {
+            padding-left: 20px;
+        }
+        ul.admission-list li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .fee-table {
+            border: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+        .fee-table th {
+            background-color: #f0f7f3;
+            color: #444;
+        }
+        .fee-note {
+            border-left: 4px solid #0e8a3e;
+            padding: 10px 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .address-icon {
+            color: #0e8a3e;
+            margin-right: 8px;
+        }
+        .important-note {
+            border-left: 4px solid #0e8a3e;
+            padding: 10px 15px;
+            background-color: #f9f9f9;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/assets/logo/logo.png" alt="UAMC" class="me-2">
+                <div>
+                    <h5 class="mb-0">Uttara Adhunik</h5>
+                    <small>Medical College (UAMC)</small>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Home Link -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">HOME</a>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT UAMC
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
+                            <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
+                            <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
+                            <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
+                            <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Facilities Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/facilities">FACILITIES</a>
+                    </li>
+
+                    <!-- Admission Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admission">ADMISSION</a>
+                    </li>
+
+                    <!-- Notice & Media Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NOTICE & MEDIA</a>
+                    </li>
+
+                    <!-- Career Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/career">CAREER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner-section" style="margin-top: 75px;">
+        <div class="banner-overlay ">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">Admission Procedure</span>
+                        </p>
+                        <h1 class="banner-title">Admission UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- tab section  -->
+    <div class="container py-4">
+        <div class="row justify-content-center py-5">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#" class="btn btn-success fw-medium px-4 py-3 "
+                        style="min-width: 220px; border: 1px dashed #ffffff;">Admission Procedure</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission
+                        Papers</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Application
+                        Form</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Admission
+                        Results</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Online
+                        Registration</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission Procedure Section -->
+    <div class="header-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="d-flex align-items-center">
+                        <div class=" me-4">
+                            <img src="/assets/images/admission/hospital-svgrepo.png" alt="">
+                            <!-- <i class="fas fa-hospital hospital-icon"></i> -->
+                        </div>
+                        <div>
+                            <h1>
+                                <span class="heading-admission">Admission Procedure</span><br>
+                                <span class="heading-fees">&amp; Fees</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <p class="description">
+                        <strong>Uttara Adhunik Medical College (UAMC)</strong> is the teaching and training
+                        hospital of the college. It is a 500-bedded, multidisciplinary tertiary care
+                        facility located in Uttara, Dhaka. The hospital serves patients from all over
+                        the country, particularly from Uttara, Tongi, Gazipur, and Savar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="admission-banner container mt-5">
+            <img src="/assets/images/admission/admission.png" alt="Medical students discussing in hospital corridor"
+                class="img-fluid">
+            <div class="admission-label d-none d-lg-flex">
+                Admission
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission Procedure Details -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="">
+                    <div class="card-body">
+                        <!-- National Students Section -->
+                        <h2 class="section-heading">For BD/National Student</h2>
+                        
+                        <div class="eligibility-section">
+                            <h3 class="eligibility-title">Eligibility</h3>
+                            <p class="eligibility-text">
+                                Applicants must meet the criteria set by the Directorate General of Medical Education (DGME) under the Ministry of Health and Family Welfare, Government of Bangladesh.
+                            </p>
+                        </div>
+                        
+                        <div class="selection-section">
+                            <h3 class="selection-title">Selection & Admission</h3>
+                            <ul class="admission-list">
+                                <li>Admission is based on the results of the DGHS national medical admission test.</li>
+                                <li>Selection follows candidate preference and merit list as per DGHS guidelines.</li>
+                                <li>Final selection is done by the admission committee formed by DGME.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="student-quotas mt-4">
+                            <h3 class="selection-title">Student Quotas</h3>
+                            <ul class="admission-list">
+                                <li><strong>Total Seats:</strong> 90 for 1st Year MBBS (since 2013-2014).</li>
+                                <li><strong>Poor Quota:</strong> 5% seats (free studentship) based on merit & financial need.</li>
+                                <li><strong>Freedom Fighter Quota:</strong> Available under DGHS rules.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="important-note">
+                            <p class="mb-0">Selected students must complete admission within the declared deadline. Failure to do so will result in cancellation, and seats will be filled from the waiting list.</p>
+                        </div>
+                        
+                        <div class="fee-section mt-4">
+                            <h3 class="selection-title">Fee Structure (Session 2024-2025)</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered fee-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%">No.</th>
+                                            <th width="60%">Particulars</th>
+                                            <th width="30%">Amount (BDT)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>Admission Fee</td>
+                                            <td>19,44,000/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>Internship Fee</td>
+                                            <td>1,80,000/-</td>
+                                        </tr>
+                                        <tr class="table-light">
+                                            <td></td>
+                                            <td><strong>Total Payable</strong></td>
+                                            <td><strong>21,24,000/-</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="fee-note">
+                                <p class="mb-1"><strong>Monthly Tuition Fee:</strong> ৳10,000 until course</p>
+                                <p class="mb-0"><strong>VAT</strong> applicable as per government rules</p>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-5">
+                        
+                        <!-- Foreign Students Section -->
+                        <h2 class="section-heading">For Foreign Students</h2>
+                        
+                        <div class="eligibility-section">
+                            <h3 class="eligibility-title">Eligibility</h3>
+                            <ul class="admission-list">
+                                <li>Must hold a non-Bangladeshi passport.</li>
+                                <li>Must follow foreign student admission policy set by the Government of Bangladesh.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="required-docs mt-4">
+                            <h3 class="selection-title">Required Documents</h3>
+                            <ul class="admission-list">
+                                <li>Attested copies of O & A level or equivalent certificates (by their Foreign Ministry).</li>
+                                <li>Application form from the Bangladesh Embassy of the respective country.</li>
+                                <li>UAMC's Foreign Student Application Form (available at college office).</li>
+                                <li>Photocopies of passport & academic documents.</li>
+                                <li>Documents must be sent to DGHS via the Foreign Ministry of Bangladesh.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="fee-section mt-4">
+                            <h3 class="selection-title">Fee Structure (Session 2024-2025)</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered fee-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%">No.</th>
+                                            <th width="60%">Particulars</th>
+                                            <th width="30%">Amount (USD)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>Admission & Tuition (5 Years)</td>
+                                            <td>$40,000</td>
+                                        </tr>
+                                        <tr class="table-light">
+                                            <td></td>
+                                            <td><strong>Total Payable</strong></td>
+                                            <td><strong>$40,000</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="fee-note">
+                                <p class="mb-0">VAT & university fees are applicable as per government and university regulations.</p>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-5">
+                        
+                        <!-- Contact Information -->
+                        <h2 class="section-heading">Contact for Admission</h2>
+                        
+                        <div class="contact-info">
+                            <p class="mb-2"><strong>Uttara Adhunik Medical College</strong></p>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt address-icon"></i> House # 34, Road # 4, Sector # 9,</p>
+                            <p class="mb-1">Sonargaon Janapath, Uttara Model Town,</p>
+                            <p class="mb-1">Dhaka-1230, Bangladesh</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-phone-alt me-2"></i>Contact Us</a>
+                                <a href="#" class="btn btn-success ms-2"><i class="fas fa-download me-2"></i>Download Application Form</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+                Footer Start
+    ------------------------------- -->
+    <footer>
+        <!-- Newsletter Section -->
+        <div class="newsletter-section bg-black text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2>Subscribe To Newsletter</h2>
+                    </div>
+                    <div class="col-md-5">
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter Your mail">
+                            <button class="submit-btn px-4 py-3 d-flex align-items-center gap-2" type="submit">Submit <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Main Content -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- College Info -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="/assets/logo/logo.png" alt="Uttara Adhunik Medical College Logo" width="60">
+                            <div class="ms-3">
+                                <h5 class="mb-0">Uttara Adhunik</h5>
+                                <p class="mb-0">Medical College (UAMC)</p>
+                            </div>
+                        </div>
+                        <p>We are passionate education dedicated to providing high-quality resources learners all
+                            backgrounds.</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Uttara, Dhaka, Bangladesh</p>
+                        <p><i class="fas fa-phone me-2"></i> 485-826-710</p>
+                    </div>
+
+                    <!-- Our Campus -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Campus</h5>
+                        <div class="footer-links">
+                            <a href="#">Academic</a>
+                            <a href="#">Athletics</a>
+                            <a href="#">Campus life</a>
+                            <a href="#">Research</a>
+                            <a href="#">Academic Area</a>
+                        </div>
+                    </div>
+
+                    <!-- Our Pages -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Pages</h5>
+                        <div class="footer-links">
+                            <a href="#">About</a>
+                            <a href="#">Tution Fee</a>
+                            <a href="#">Alumni</a>
+                            <a href="#">Faculty Staff</a>
+                            <a href="#">Event</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">Recent Posts</h5>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> August 6, 2024
+                                </div>
+                                <h6>Those Inequalities Are Inequalities That</h6>
+                            </div>
+                        </div>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> July 4, 2024
+                                </div>
+                                <h6>After Decades Of Improvement, Cardiovascular</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom / Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">Copyright @ <span id="currentYear"></span>. All Rights Reserved by <a href="#"
+                                class="text-white">UAMC</a></p>
+                        <script>
+                            document.getElementById('currentYear').textContent = new Date().getFullYear();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth scroll and active link highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update active link on scroll
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Add your logic to determine which link should be active
+                // This is a simplified version - you'll need to implement
+                // your own logic based on your page sections
+                document.querySelector('.nav-link[href="/"]').classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
