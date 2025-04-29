@@ -137,6 +137,59 @@
             height: auto;
         }
 
+    
+        /* hospital services  */
+        .stats-card {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .stats-divider {
+            width: 1px;
+            background-color: #c8cdd1;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .stats-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0e8a3e;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+        .stats-unit {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        .stats-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #212529;
+        }
+        .additional-info {
+            margin-top: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 20px 30px;
+        }
+        .additional-label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #343a40;
+            margin-right: 10px;
+        }
+        .additional-text {
+            color: #495057;
+            font-size: 1rem;
+        }
+        @media (max-width: 767px) {
+            .stats-divider {
+                width: 80%;
+                height: 1px;
+                margin: 30px auto;
+            }
+        }
 
        
     </style>
@@ -250,6 +303,80 @@
           </div>
         </div>
     </div>
+    
+    <!-- Hospital services  -->
+
+    <!-- Admission Procedure Section -->
+    <div class="header-section" style="background-color: rgba(199, 244, 217, 0.3); padding: 80px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="d-flex align-items-center">
+                        <div class=" me-4">
+                            <img src="/assets/images/admission/hospital-svgrepo.png" alt="">
+                            <!-- <i class="fas fa-hospital hospital-icon"></i> -->
+                        </div>
+                        <div>
+                            <h1>
+                                <span class="heading-admission">About the</span><br>
+                                <span class="heading-fees text-success">Hospital</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <p class="description">
+                        <strong>Uttara Adhunik Medical College (UAMC)</strong> is the teaching and training
+                        hospital of the college. It is a 500-bedded, multidisciplinary tertiary care
+                        facility located in Uttara, Dhaka. The hospital serves patients from all over
+                        the country, particularly from Uttara, Tongi, Gazipur, and Savar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="admission-banner container mt-5">
+            <img src="/assets/images/admission/admission.png" alt="Medical students discussing in hospital corridor"
+                class="img-fluid w-100">
+        </div>
+
+        <!-- Admission Procedure Section End -->
+    <div class="stats-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="stats-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <div class="stats-number">87,260.035</div>
+                                <div class="stats-unit">sq. ft. (5 Bighas)</div>
+                                <div class="stats-label">Total Land Area</div>
+                            </div>
+                            
+                            <div class="col-md-2">
+                                <div class="stats-divider"></div>
+                            </div>
+                            
+                            <div class="col-md-5">
+                                <div class="stats-number">17</div>
+                                <div class="stats-unit">Storied</div>
+                                <div class="stats-label">Main Building</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                        <!-- <div class="row">
+                            <div class="col-md-12 text-center">
+                                <span class="additional-label">Additional Structures:</span>
+                                <span class="additional-text">Separate buildings for Radiology, Orthopedics, ENT, Dental & Emergency Departments</span>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     
     
 
