@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,12 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="/styles/notice.css">
+    <link rel="stylesheet" href="/styles/notice.css">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.85);
@@ -21,12 +23,12 @@
             --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             --primary-color: #0d6efd;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
-        
+
         .navbar {
             background: var(--glass-bg) !important;
             backdrop-filter: blur(10px);
@@ -35,17 +37,17 @@
             box-shadow: var(--glass-shadow);
             transition: all 0.3s ease;
         }
-        
+
         .navbar-brand h5 {
             font-weight: 700;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
             margin-bottom: 0.2rem;
         }
-        
+
         .navbar-brand small {
             font-size: clamp(0.7rem, 1vw, 0.85rem);
         }
-        
+
         .nav-link {
             font-weight: 500;
             font-size: clamp(0.85rem, 1.1vw, 1rem);
@@ -53,18 +55,19 @@
             color: #333 !important;
             transition: all 0.2s ease;
         }
-        
-        .nav-link:hover, .nav-link:focus {
+
+        .nav-link:hover,
+        .nav-link:focus {
             color: var(--primary-color) !important;
             transform: translateY(-2px);
         }
-        
+
         .nav-link.active {
             color: var(--primary-color) !important;
             font-weight: 600;
             position: relative;
         }
-        
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -75,7 +78,7 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
+
         .dropdown-menu {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -86,27 +89,28 @@
             overflow: hidden;
             min-width: 220px;
         }
-        
+
         .dropdown-item {
             font-size: clamp(0.8rem, 1vw, 0.9rem);
             padding: 0.65rem 1.25rem;
             transition: all 0.2s ease;
         }
-        
-        .dropdown-item:hover, .dropdown-item:focus {
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
             background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
             color: var(--primary-color) !important;
             transform: translateX(5px);
         }
-        
+
         .dropdown-toggle::after {
             transition: transform 0.2s ease;
         }
-        
-        .show > .dropdown-toggle::after {
+
+        .show>.dropdown-toggle::after {
             transform: rotate(-180deg);
         }
-        
+
         /* Mobile adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
@@ -118,37 +122,39 @@
                 margin-top: 0.5rem;
                 box-shadow: var(--glass-shadow);
             }
-            
+
             .dropdown-menu {
                 background: rgba(255, 255, 255, 0.95);
                 margin-left: 1rem;
                 border-left: 3px solid var(--primary-color);
                 box-shadow: none;
             }
-            
+
             .nav-link {
                 padding: 0.5rem 0 !important;
             }
         }
-        
+
         /* Logo sizing */
         .navbar-brand img {
             width: clamp(50px, 5vw, 60px);
             height: auto;
         }
 
-    
+
         /* hospital services  */
         .stats-card {
             padding: 40px 20px;
             text-align: center;
         }
+
         .stats-divider {
             width: 1px;
             background-color: #c8cdd1;
             height: 100px;
             margin: 0 auto;
         }
+
         .stats-number {
             font-size: 3.5rem;
             font-weight: 700;
@@ -156,33 +162,39 @@
             line-height: 1.1;
             margin-bottom: 5px;
         }
+
         .stats-unit {
             font-size: 1rem;
             color: #6c757d;
             margin-bottom: 15px;
         }
+
         .stats-label {
             font-size: 1.25rem;
             font-weight: 600;
             color: #212529;
         }
+
         .additional-info {
             margin-top: 25px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             padding: 20px 30px;
         }
+
         .additional-label {
             font-weight: 600;
             font-size: 1.1rem;
             color: #343a40;
             margin-right: 10px;
         }
+
         .additional-text {
             color: #495057;
             font-size: 1rem;
         }
+
         @media (max-width: 767px) {
             .stats-divider {
                 width: 80%;
@@ -191,9 +203,109 @@
             }
         }
 
-       
+        /* facilities  */
+        .main-title {
+            font-size: 3rem;
+            color: #0a8a3a;
+            font-weight: bold;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-number {
+            font-size: 4rem;
+            color: #9cd1b3;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .section-text {
+            font-weight: bold;
+        }
+
+        .service-card {
+            height: 100%;
+            border: 2px dashed #cce5d8;
+            border-radius: 10px;
+            padding: 1.5rem;
+            background-color: #f2f9f5;
+            transition: transform 0.3s;
+        }
+
+        .solid-card {
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 1.5rem;
+            background-color: #0a8a3a;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover,
+        .solid-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            background-color: #0a8a3a;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .white-icon {
+            background-color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-description {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        .section-bg {
+            background-color: #e3f5eb;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .related-title {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .related-icon {
+            margin-left: 1rem;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -206,13 +318,13 @@
                     <small>Medical College (UAMC)</small>
                 </div>
             </a>
-            
+
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -220,11 +332,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    
+
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             ABOUT UAMC
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -232,28 +344,29 @@
                             <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
                             <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
                             <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
-                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
                             <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
                             <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
                             <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Facilities Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/facilities">FACILITIES</a>
                     </li>
-                    
+
                     <!-- Admission Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/admission">ADMISSION</a>
                     </li>
-                    
+
                     <!-- Notice & Media Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">NOTICE & MEDIA</a>
                     </li>
-                    
+
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
@@ -268,42 +381,44 @@
         <div class="banner-overlay ">
             <div class="container">
                 <div class="row align-items-end">
-                  <div class="col-md-8 mb-md-0">
-                    <p class="breadcrumb-text">
-                        <a href="/" class="text-decoration-none text-secondary ">Home</a> 
-                        <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Hospital Services</span>
-                    </p>
-                    <h1 class="banner-title">Facilites UAMC</h1>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
-                    <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
-                  </div>
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">Hospital Services</span>
+                        </p>
+                        <h1 class="banner-title">Facilites UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
         </div>
     </div>
 
     <div class="p-4">
         <div class="row justify-content-center py-5">
-          <div class="col-12">
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-              <a href="#" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Hospital Services</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Departmnts</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Library</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Medical Education Unit</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Training</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Publication</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Seminar</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Hotel</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Laboratory</a>
-              <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Cafeteria</a>
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#" class="btn btn-success fw-medium px-4 py-3 "
+                        style="min-width: 220px; border: 1px dashed #ffffff;">Hospital Services</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Departmnts</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Library</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Medical
+                        Education Unit</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Training</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Publication</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Seminar</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Hotel</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Laboratory</a>
+                    <a href="#" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Cafeteria</a>
+                </div>
             </div>
-          </div>
         </div>
     </div>
-    
+
     <!-- Hospital services  -->
 
     <!-- Admission Procedure Section -->
@@ -340,45 +455,415 @@
         </div>
 
         <!-- Admission Procedure Section End -->
-    <div class="stats-container">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <div class="stats-card">
-                        <div class="row align-items-center">
-                            <div class="col-md-5">
-                                <div class="stats-number">87,260.035</div>
-                                <div class="stats-unit">sq. ft. (5 Bighas)</div>
-                                <div class="stats-label">Total Land Area</div>
-                            </div>
-                            
-                            <div class="col-md-2">
-                                <div class="stats-divider"></div>
-                            </div>
-                            
-                            <div class="col-md-5">
-                                <div class="stats-number">17</div>
-                                <div class="stats-unit">Storied</div>
-                                <div class="stats-label">Main Building</div>
+        <div class="stats-container">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="stats-card">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <div class="stats-number">87,260.035</div>
+                                    <div class="stats-unit">sq. ft. (5 Bighas)</div>
+                                    <div class="stats-label">Total Land Area</div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="stats-divider"></div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="stats-number">17</div>
+                                    <div class="stats-unit">Storied</div>
+                                    <div class="stats-label">Main Building</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    
+
+
                         <!-- <div class="row">
                             <div class="col-md-12 text-center">
                                 <span class="additional-label">Additional Structures:</span>
                                 <span class="additional-text">Separate buildings for Radiology, Orthopedics, ENT, Dental & Emergency Departments</span>
                             </div>
                         </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- facilities  -->
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">
+            <span class="main-title">UAMCH</span> Facilities & Services
+        </h1>
+
+        <!-- Medical Services Section -->
+        <div class="section-title ">
+            <div class="section-number">01</div>
+            <div class="section-text">
+                <h2>MEDICAL<br>SERVICES</h2>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- General Medicine -->
+            <div class="col-md-3">
+                <div class="solid-card">
+                    <div class="white-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0a8a3a"
+                            class="bi bi-heart-pulse" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.406-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z" />
+                            <path
+                                d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title white-text">General Medicine</h5>
+                    <p class="service-description white-text">Diagnosis and treatment of a wide range of adult diseases
+                        and conditions.</p>
+                </div>
+            </div>
+
+            <!-- Surgery -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                            class="bi bi-scissors" viewBox="0 0 16 16">
+                            <path
+                                d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Surgery</h5>
+                    <p class="service-description">Operative procedures for treating injuries, deformities, and
+                        diseases.</p>
+                </div>
+            </div>
+
+            <!-- Obstetrics & Gynecology -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                            class="bi bi-gender-female" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Obstetrics & Gynecology</h5>
+                    <p class="service-description">Care for women's reproductive health, pregnancy, and childbirth.</p>
+                </div>
+            </div>
+
+            <!-- Pediatrics -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                            class="bi bi-balloon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984ZM8 10c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5Z" />
+                            <path d="M4.5 14.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Z" />
+                            <path d="M8 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Pediatrics</h5>
+                    <p class="service-description">Specialized medical care for infants, children, and adolescents.</p>
+                </div>
+            </div>
+
+            <!-- Anesthesiology -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-mask"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546zM4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Anesthesiology</h5>
+                    <p class="service-description">Administration of anesthesia and pain management during procedures.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Radiology & Imaging -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                            class="bi bi-file-medical" viewBox="0 0 16 16">
+                            <path
+                                d="M8.5 4.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L7 6l-.549.317a.5.5 0 1 0 .5.866l.549-.317V7.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L9 6l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V4.5zM5.5 9a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                            <path
+                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Radiology & Imaging</h5>
+                    <p class="service-description">Diagnostic services including X-rays, CT scans, and ultrasounds.</p>
+                </div>
+            </div>
+
+            <!-- Dentistry -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-tooth"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8.5 1.5A3.5 3.5 0 0 0 5 5V.5a.5.5 0 0 1 1 0V5a2.5 2.5 0 0 1 5 0V.5a.5.5 0 0 1 1 0V5a3.5 3.5 0 0 0-3.5-3.5M7 6a1 1 0 0 0-1 1v.5a.5.5 0 0 1-1 0V7a2 2 0 1 1 4 0v.5a.5.5 0 0 1-1 0V7a1 1 0 0 0-1-1" />
+                            <path
+                                d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2Z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Dentistry</h5>
+                    <p class="service-description">Oral health services including diagnosis and treatment of dental
+                        disorders.</p>
+                </div>
+            </div>
+
+            <!-- Blood Transfusion -->
+            <div class="col-md-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                            class="bi bi-droplet" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
+                            <path fill-rule="evenodd"
+                                d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z" />
+                        </svg>
+                    </div>
+                    <h5 class="service-title">Blood Transfusion</h5>
+                    <p class="service-description">Safe and reliable blood and component transfusion services.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clinical Departments Section -->
+        <div class="section-title">
+            <div class="section-number">02</div>
+            <div class="section-text">
+                <h2>CLINICAL<br>DEPARTMENTS</h2>
+            </div>
+        </div>
+
+        <div class="section-bg p-5">
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <div class="related-title">
+                        <span>MEDICINE<br>RELATED</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="solid-card">
+                            <div class="white-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0a8a3a"
+                                    class="bi bi-brain" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.76 16a3.12 3.12 0 0 0 .567-.093 2.65 2.65 0 0 0 .934-.344 2.99 2.99 0 0 0 .631-.551 3.49 3.49 0 0 0 .435-.7l.7.066a1.56 1.56 0 0 0 .432-.052c.195-.045.44-.127.707-.217a7.07 7.07 0 0 0 2.317-1.267 6.73 6.73 0 0 0 1.966-2.562c.087-.202.158-.416.217-.638a5.5 5.5 0 0 0 .096-.65c.015-.173.018-.356.008-.536A2.83 2.83 0 0 0 15.51 8a2.83 2.83 0 0 0 .258-1.356 3.46 3.46 0 0 0-.008-.535 5.38 5.38 0 0 0-.096-.65 5.17 5.17 0 0 0-.217-.64 6.73 6.73 0 0 0-1.967-2.56 7.07 7.07 0 0 0-2.316-1.265 6.65 6.65 0 0 0-.707-.217 1.56 1.56 0 0 0-.432-.054 3.57 3.57 0 0 0-.868.1 2.25 2.25 0 0 0-.768.279 2.4 2.4 0 0 0-.3.254c-.346-.123-.6-.372-.85-.7a2.34 2.34 0 0 0-.629-.553 2.65 2.65 0 0 0-.934-.342A3.3 3.3 0 0 0 5.5 0q-.314 0-.552.053a2.75 2.75 0 0 0-.909.322c-.218.129-.424.292-.602.475a2.92 2.92 0 0 0-.89.918c-.21.34-.345.722-.4 1.134-.054.412-.046.823.02 1.22a4.37 4.37 0 0 0-1.59 1.771c-.34.65-.573 1.35-.686 2.085-.114.731-.111 1.415.006 2.11.118.693.37 1.32.764 1.9a4.89 4.89 0 0 0 1.466 1.474c.58.391 1.274.684 2.099.877-.29.511-.49 1.022-.606 1.546-.117.523-.133 1.07-.048 1.614.085.543.248 1.033.494 1.458s.583.789 1.002 1.075a3.3 3.3 0 0 0 1.389.62c.528.107 1.093.125 1.656.07ZM4.53 3.247a5.4 5.4 0 0 0-.024-.209 3.06 3.06 0 0 1-.008-.662c.023-.252.088-.505.196-.75a2.15 2.15 0 0 1 .452-.747 1.8 1.8 0 0 1 .453-.337c.163-.09.332-.136.504-.146.173-.01.354.02.535.1a1.62 1.62 0 0 1 .733.66c.147.241.258.516.329.841.07.325.098.671.092 1.03a4.79 4.79 0 0 1-.153 1.15 4.21 4.21 0 0 1-.387 1.017 5.23 5.23 0 0 0-.863-.669 5.94 5.94 0 0 0-1.039-.5 5.46 5.46 0 0 0-.74-.233Zm4.434 12.227a2.68 2.68 0 0 1-.618-.09 2.43 2.43 0 0 1-.553-.192 2.35 2.35 0 0 1-.47-.317 2.97 2.97 0 0 1-.412-.473 2.81 2.81 0 0 1-.301-.575 2.75 2.75 0 0 1-.17-.618 2.9 2.9 0 0 1-.021-.592c.006-.187.04-.381.09-.581a4.5 4.5 0 0 1 .334-.933 5.7 5.7 0 0 1 .287-.525c.161.093.331.176.506.247.252.104.513.19.783.257.267.067.537.112.809.136.272.024.542.024.81 0a5.97 5.97 0 0 0 .865-.163 5.71 5.71 0 0 0 .774-.291c.24-.107.471-.235.69-.386.217.285.412.579.58.875.169.297.32.624.45.965s.227.618.3.92c.073.303.109.565.108.788a2.62 2.62 0 0 1-.082.805 2.16 2.16 0 0 1-.25.622 1.81 1.81 0 0 1-.42.489c-.174.128-.382.226-.633.29a2.77 2.77 0 0 1-.798.089c-.191-.007-.382-.045-.573-.116s-.371-.178-.537-.312a2.25 2.25 0 0 1-.421-.516 2.37 2.37 0 0 1-.266-.743 3.95 3.95 0 0 0 .978-.2 3.54 3.54 0 0 0 .748-.345 2.49 2.49 0 0 0 .523-.45c.149-.172.255-.364.32-.578a1.88 1.88 0 0 0 .070-.695 2.25 2.25 0 0 0-.17-.71 2.85 2.85 0 0 0-.368-.627 3.12 3.12 0 0 0-.503-.529 5.63 5.63 0 0 1-.592.546 4.5 4.5 0 0 1-.684.427c-.25.125-.513.227-.784.308-.27.08-.547.139-.828.176a4.25 4.25 0 0 1-.814.052 5.2 5.2 0 0 1-.677-.077 28.36 28.36 0 0 0 .037-.398 3.5 3.5 0 0 0-.022-.777 3.16 3.16 0 0 0-.154-.65 2.3 2.3 0 0 0-.295-.575 2.13 2.13 0 0 0-.452-.483 2.52 2.52 0 0 0-.607-.33 4.58 4.58 0 0 0-.723-.17 5.11 5.11 0 0 0-.787-.046 3.69 3.69 0 0 0-.683.067c-.222.045-.4.11-.536.194.016-.212.054-.425.118-.636a2.83 2.83 0 0 1 .261-.601c.11-.19.244-.365.403-.525a1.89 1.89 0 0 1 .558-.37 2.01 2.01 0 0 1 .722-.137 2.04 2.04 0 0 1 .629.084c.188.053.35.123.486.21.15.1.276.211.38.339a2.4 2.4 0 0 1 .417.866c.078.316.096.644.051.982-.044.338-.146.687-.303 1.04a5.85 5.85 0 0 1-.549 1.013 10.1 10.1 0 0 1 1.458.21 8.43 8.43 0 0 1 1.407.44c.443.182.87.405 1.274.668a6.03 6.03 0 0 1 1.074.9 5.08 5.08 0 0 1 .725.97c.171.32.295.662.369 1.028.073.365.098.757.072 1.167a3.9 3.9 0 0 1-.211 1.132Z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title white-text">Neuromedicine</h5>
+                            <p class="service-description white-text">Treatment of brain, spine, and nervous system
+                                disorders.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-capsule" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429l4.243 4.242Z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Gastroenterology</h5>
+                            <p class="service-description">Care for digestive system and gastrointestinal tract issues.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523.898-.7 2.04-.2 3.38C2.07 9.186 5.1 11.41 8 13.542c2.9-2.14 5.93-4.356 6.79-7.1.5-1.34.32-2.48-.2-3.38C13.486.877 10.4.28 8.717 2.01L8 2.748zm.53.074.73-.74c1.49-1.5 3.89-1.037 4.83.78.65 1.24.45 2.264-.15 3.36-.87 1.593-2.95 3.376-5.94 5.648C4.97 9.184 2.89 7.4 2.01 5.81c-.6-1.1-.8-2.12-.15-3.36C2.81 1.047 5.21.58 6.7 2.08l.53.54z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Cardiology</h5>
+                            <p class="service-description">Diagnosis and treatment of heart and circulatory system
+                                diseases.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-activity" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Nephrology</h5>
+                            <p class="service-description">Management of kidney diseases and renal disorders.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                    <path
+                                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Radiation Oncology</h5>
+                            <p class="service-description">Cancer treatment using high-energy radiation therapy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+                                    <path
+                                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Psychiatry</h5>
+                            <p class="service-description">Mental health diagnosis and therapeutic treatment.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+                                    <path
+                                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                                </svg>
+                            </div>
+                            <h5 class="service-title">Dermatology</h5>
+                            <p class="service-description">Care for skin, hair, and nail disorders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surgical Related Section -->
+         <div class="section-bg p-5">
+             <div class="related-title pb-4">
+                 <span>SURGICAL<br>RELATED</span>
+             </div>
+
+             <div class="row g-4 mb-4">
+                 <div class="col-md-4">
+                     <div class="solid-card">
+                         <div class="white-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0a8a3a" class="bi bi-ear"
+                                 viewBox="0 0 16 16">
+                                 <path
+                                     d="M8.5 1A4.5 4.5 0 0 0 4 5.5v7.047a2.453 2.453 0 0 0 4.75.861l.512-1.363a5.553 5.553 0 0 1 .816-1.46l2.008-2.581A4.34 4.34 0 0 0 8.66 1H8.5ZM3 5.5A5.5 5.5 0 0 1 8.5 0h.16a5.34 5.34 0 0 1 4.215 8.618l-2.008 2.581a4.555 4.555 0 0 0-.67 1.197l-.51 1.363A3.453 3.453 0 0 1 3 12.547V5.5ZM8.5 4A1.5 1.5 0 0 0 7 5.5v2.695c.112-.06.223-.123.332-.192.327-.208.577-.44.72-.727a1.5 1.5 0 0 1 .638-.578 1.737 1.737 0 0 1 .73-.149.733.733 0 0 1 .333.075.833.833 0 0 1 .98.98.733.733 0 0 1 .075.333 1.737 1.737 0 0 1-.15.73 1.5 1.5 0 0 1-.577.638c-.287.143-.52.393-.727.72-.07.11-.134.22-.193.333H10.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5V5.5A2.5 2.5 0 0 1 10.5 3h.5a.5.5 0 0 1 0 1h-.5A1.5 1.5 0 0 0 8.5 4Z" />
+                             </svg>
+                         </div>
+                         <h5 class="service-title white-text">Otolaryngology (ENT)</h5>
+                         <p class="service-description white-text">Surgery and medical treatment of ear, nose, and throat
+                             conditions.</p>
+                     </div>
+                 </div>
+     
+                 <div class="col-md-4">
+                     <div class="service-card">
+                         <div class="service-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-eye"
+                                 viewBox="0 0 16 16">
+                                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                 <path
+                                     d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                             </svg>
+                         </div>
+                         <h5 class="service-title">Ophthalmology</h5>
+                         <p class="service-description">Eye care including diagnosis and vision correction.</p>
+                     </div>
+                 </div>
+     
+                 <div class="col-md-4">
+                     <div class="service-card">
+                         <div class="service-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                 class="bi bi-scissors" viewBox="0 0 16 16">
+                                 <path
+                                     d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
+                             </svg>
+                         </div>
+                         <h5 class="service-title">Neurosurgery</h5>
+                         <p class="service-description">Surgical treatment of disorders related to the brain and spinal cord.
+                         </p>
+                     </div>
+                 </div>
+                 <div class="col-md-6">
+                     <div class="service-card">
+                         <div class="service-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                 class="bi bi-gender-male" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd"
+                                     d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                             </svg>
+                         </div>
+                         <h5 class="service-title">Urology</h5>
+                         <p class="service-description">Surgical care for urinary tract and male reproductive organs.
+                         </p>
+                     </div>
+                 </div>
+         
+                 <div class="col-md-6">
+                     <div class="service-card">
+                         <div class="service-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                 class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                 <path
+                                     d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+                                 <path
+                                     d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                             </svg>
+                         </div>
+                         <h5 class="service-title">Orthopedics</h5>
+                         <p class="service-description">Treatment of bone, joint, and musculoskeletal system
+                             problems.</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
     </div>
 
-    
-    
 
     <!-- -------------------------------
                 Footer Start
@@ -450,7 +935,8 @@
                         <h5 class="footer-heading">Recent Posts</h5>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> August 6, 2024
@@ -460,7 +946,8 @@
                         </div>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> July 4, 2024
@@ -491,20 +978,20 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Smooth scroll and active link highlighting -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Update active link on scroll
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                
+
                 // Add your logic to determine which link should be active
                 // This is a simplified version - you'll need to implement
                 // your own logic based on your page sections
@@ -513,4 +1000,5 @@
         });
     </script>
 </body>
+
 </html>
