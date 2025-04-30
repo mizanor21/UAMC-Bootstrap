@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="/styles/about/history.css">
+    <link rel="stylesheet" href="/styles/about/history.css">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.85);
@@ -19,12 +21,12 @@
             --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             --primary-color: #0d6efd;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            /* background-color: #f8f9fa; */
         }
-        
+
         .navbar {
             background: var(--glass-bg) !important;
             backdrop-filter: blur(10px);
@@ -33,17 +35,17 @@
             box-shadow: var(--glass-shadow);
             transition: all 0.3s ease;
         }
-        
+
         .navbar-brand h5 {
             font-weight: 700;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
             margin-bottom: 0.2rem;
         }
-        
+
         .navbar-brand small {
             font-size: clamp(0.7rem, 1vw, 0.85rem);
         }
-        
+
         .nav-link {
             font-weight: 500;
             font-size: clamp(0.85rem, 1.1vw, 1rem);
@@ -51,18 +53,19 @@
             color: #333 !important;
             transition: all 0.2s ease;
         }
-        
-        .nav-link:hover, .nav-link:focus {
+
+        .nav-link:hover,
+        .nav-link:focus {
             color: var(--primary-color) !important;
             transform: translateY(-2px);
         }
-        
+
         .nav-link.active {
             color: var(--primary-color) !important;
             font-weight: 600;
             position: relative;
         }
-        
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -73,7 +76,7 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
+
         .dropdown-menu {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -84,27 +87,28 @@
             overflow: hidden;
             min-width: 220px;
         }
-        
+
         .dropdown-item {
             font-size: clamp(0.8rem, 1vw, 0.9rem);
             padding: 0.65rem 1.25rem;
             transition: all 0.2s ease;
         }
-        
-        .dropdown-item:hover, .dropdown-item:focus {
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
             background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
             color: var(--primary-color) !important;
             transform: translateX(5px);
         }
-        
+
         .dropdown-toggle::after {
             transition: transform 0.2s ease;
         }
-        
-        .show > .dropdown-toggle::after {
+
+        .show>.dropdown-toggle::after {
             transform: rotate(-180deg);
         }
-        
+
         /* Mobile adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
@@ -116,26 +120,238 @@
                 margin-top: 0.5rem;
                 box-shadow: var(--glass-shadow);
             }
-            
+
             .dropdown-menu {
                 background: rgba(255, 255, 255, 0.95);
                 margin-left: 1rem;
                 border-left: 3px solid var(--primary-color);
                 box-shadow: none;
             }
-            
+
             .nav-link {
                 padding: 0.5rem 0 !important;
             }
         }
-        
+
         /* Logo sizing */
         .navbar-brand img {
             width: clamp(50px, 5vw, 60px);
             height: auto;
         }
+
+        /* feature part  */
+        .feature-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://i.postimg.cc/kGpkBp9L/cam1.jpg');
+        }
+
+        .bg-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+        }
+
+        .bg-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.3;
+        }
+
+        .stats-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            background-color: rgba(0, 100, 0, 0.85);
+            padding: 1.5rem;
+            color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .feature-container {
+                height: 300px;
+            }
+
+            .stats-box {
+                width: 80%;
+                padding: 3rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-container {
+                height: 400px;
+            }
+
+            .stats-box {
+                width: 75%;
+            }
+        }
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        .stat-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-desc {
+            font-size: 1rem;
+            color: #FECD2F;
+        }
+
+        @media (min-width: 768px) {
+            .stat-title {
+                font-size: 2.75rem;
+            }
+
+            .stat-desc {
+                font-size: 1.125rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .stat-title {
+                font-size: 4.5rem;
+            }
+        }
+
+        /* history time line  */
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background-color: #dee2e6;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-badge {
+            position: absolute;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #0f8a33;
+            border: 4px solid #fff;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-panel {
+            position: relative;
+            width: 45%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .timeline-left .timeline-panel {
+            float: left;
+        }
+        
+        .timeline-right .timeline-panel {
+            float: right;
+        }
+        
+        .timeline-year {
+            color: #0f8a33;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-desc {
+            color: #6c757d;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: #495057;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+            
+            .timeline-badge {
+                left: 40px;
+            }
+            
+            .timeline-panel {
+                width: calc(100% - 90px);
+                float: right;
+            }
+            
+            .timeline-left .timeline-panel,
+            .timeline-right .timeline-panel {
+                float: right;
+                margin-left: 90px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -148,13 +364,13 @@
                     <small>Medical College (UAMC)</small>
                 </div>
             </a>
-            
+
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -162,11 +378,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    
+
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             ABOUT UAMC
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -174,28 +390,29 @@
                             <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
                             <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
                             <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
-                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
                             <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
                             <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
                             <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Facilities Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/facilities">FACILITIES</a>
                     </li>
-                    
+
                     <!-- Admission Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/admission">ADMISSION</a>
                     </li>
-                    
+
                     <!-- Notice & Media Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">NOTICE & MEDIA</a>
                     </li>
-                    
+
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
@@ -210,24 +427,243 @@
         <div class="banner-overlay ">
             <div class="container">
                 <div class="row align-items-end">
-                  <div class="col-md-8 mb-md-0">
-                    <p class="breadcrumb-text">
-                        <a href="/" class="text-decoration-none text-secondary ">Home</a> 
-                        <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Notice & Media</span>
-                    </p>
-                    <h1 class="banner-title">About UAMC</h1>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
-                    <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
-                  </div>
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">History Of UAMC</span>
+                        </p>
+                        <h1 class="banner-title">About UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
         </div>
     </div>
 
+    <!-- tab section -->
+    <div class="p-4">
+        <div class="row justify-content-center py-5">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="/overview.html" class="btn btn-success fw-medium px-4 py-3 "
+                        style="min-width: 220px; border: 1px dashed #ffffff;">Overview</a>
+                    <a href="/history-uamc.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">History of UAMC</a>
+                    <a href="/vission-mission.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Vision & Mission</a>
+                    <a href="/aim-objective.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Aim & Objective</a>
+                    <a href="organizational-structure.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Organizational Structure</a>
+                    <a href="/founder-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Founder Members</a>
+                    <a href="/ec-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">EC Members</a>
+                    <a href="/gb-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">GB Members</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- History of UAMC -->
+    <div class="header-section py-5" style="background-color: #E6F3EB;">
+        <div class="container ">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h1>
+                                <span class="heading-admission">History of
+                                </span><br>
+                                <span class="heading-fees text-success">Uttara Adhunik Medical <br>
+                                    College (UAMC)</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <p class="description">
+                        <strong>Uttara Adhunik Medical College (UAMC)</strong> is the teaching and training
+                        hospital of the college. It is a 500-bedded, multidisciplinary tertiary care
+                        facility located in Uttara, Dhaka. The hospital serves patients from all over
+                        the country, particularly from Uttara, Tongi, Gazipur, and Savar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="admission-banner container mt-5">
+            <img src="/assets/images/admission/admission.png" alt="Medical students discussing in hospital corridor"
+                class="img-fluid w-100">
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            Feature Start
+    ------------------------------- -->
+    <div class="feature-container">
+        <div class="bg-overlay"></div>
+
+        <div class="stats-box d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Stat 1 -->
+            <div class="stat-item  border-md-right pb-4 pb-md-0">
+                <h2 class="stat-title">90%</h2>
+                <p class="stat-desc pb-0 mb-0">Post Graduation</p>
+                <p class="stat-desc">Success Rate</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-item border-md-right pb-4 pb-md-0">
+                <h2 class="stat-title">Top 10</h2>
+                <p class="stat-desc pb-0 mb-0">Colleges That</p>
+                <p class="stat-desc">Create Futures</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-item">
+                <h2 class="stat-title">No.1</h2>
+                <p class="stat-desc pb-0 mb-0">In The Nation For</p>
+                <p class="stat-desc">Materials R&D</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+          Timeline   Section Start
+    ------------------------------- -->
+    <div class="container py-5">
+        <div class="timeline-header">
+            <h1 class="display-4">Timeline of UAMC's Evolution</h1>
+            <h2 class="text-muted mb-4">Since - 1984</h2>
+        </div>
+        
+        <div class="intro-text">
+            <p>Founded in 2007, UAMC, under BMSRI, is a leading medical institution affiliated with Dhaka University. With a 500-bed hospital, it excels in medical education, research, and patient care, shaping the future of healthcare in Bangladesh.</p>
+        </div>
+        
+        <ul class="timeline">
+            <!-- 1984 -->
+            <li class="timeline-item timeline-left clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">1984</div>
+                    <h3 class="timeline-title">The Vision Begins</h3>
+                    <p class="timeline-desc">The foundation for what would become UAMC was laid with a vision for better healthcare education in Bangladesh.</p>
+                </div>
+            </li>
+            
+            <!-- 1986 -->
+            <li class="timeline-item timeline-right clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">1986</div>
+                    <h3 class="timeline-title">The First Private Medical College</h3>
+                    <p class="timeline-desc">Establishment of the first private medical college in the region, setting a precedent for future developments.</p>
+                </div>
+            </li>
+            
+            <!-- 2003 -->
+            <li class="timeline-item timeline-left clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">2003</div>
+                    <h3 class="timeline-title">Foundation of Uttara Adhunik Hospital</h3>
+                    <p class="timeline-desc">The hospital that would later become part of UAMC was established, focusing on providing quality healthcare services.</p>
+                </div>
+            </li>
+            
+            <!-- 2005 -->
+            <li class="timeline-item timeline-right clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">2005</div>
+                    <h3 class="timeline-title">Expansion of Indoor Services</h3>
+                    <p class="timeline-desc">The hospital expanded its indoor services, increasing capacity and improving infrastructure.</p>
+                </div>
+            </li>
+            
+            <!-- 2007 -->
+            <li class="timeline-item timeline-left clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">2007</div>
+                    <h3 class="timeline-title">Birth of Uttara Adhunik Medical College (UAMC)</h3>
+                    <p class="timeline-desc">UAMC was officially established under the Bangladesh Medical Science Research Institute (BMSRI).</p>
+                </div>
+            </li>
+            
+            <!-- 2008 -->
+            <li class="timeline-item timeline-right clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">2008</div>
+                    <h3 class="timeline-title">UAMC's Academic Journey Begins</h3>
+                    <p class="timeline-desc">The first batch of medical students were admitted, marking the beginning of UAMC's educational mission.</p>
+                </div>
+            </li>
+            
+            <!-- Present -->
+            <li class="timeline-item timeline-left clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">Present</div>
+                    <h3 class="timeline-title">Advancing Healthcare & Education</h3>
+                    <p class="timeline-desc">UAMC continues to excel in medical education, research, and patient care, serving as a leading healthcare institution in Bangladesh.</p>
+                </div>
+            </li>
+            
+            <!-- Future -->
+            <li class="timeline-item timeline-right clearfix">
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-year">Future</div>
+                    <h3 class="timeline-title">Advancing Healthcare & Education</h3>
+                    <p class="timeline-desc">UAMC is committed to continuing its mission of improving healthcare through education, research, and service excellence.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- -------------------------------
+            UAMC Admission Start
+    ------------------------------- -->
+    <div class="position-relative w-100 vh-75 d-flex justify-content-center align-items-center px-4" style="
+    background-image: url('https://i.postimg.cc/YCkWTD9t/unnamed.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  ">
+        <!-- Green Overlay -->
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-success bg-opacity-75 "></div>
+
+        <!-- Content with Glass Effect -->
+        <div class="position-relative text-center text-white mx-md-5 px-3 px-md-5 py-4 bg-dark bg-opacity-10"
+            style="backdrop-filter: blur(8px);">
+            <h2 class="display-4 fw-bold">
+                <span style="color: #FECD2F;">UAMC</span> Admission
+            </h2>
+            <p class="mt-4 text-start text-md-center">
+                Uttara Adhunik Medical College (UAMC) was established in 2003 with a
+                vision to provide quality medical education and healthcare services.
+                Founded through the dedicated efforts of medical professionals and
+                social leaders, UAMC is committed to training future doctors while
+                ensuring affordable healthcare for the community.
+            </p>
+            <button class="mt-4 px-5 py-3 btn btn-success d-flex align-items-center gap-2 mx-auto"
+                style="transition: all 0.3s;"
+                onmouseover="this.style.backgroundColor='#FECD2F'; this.style.color='black';"
+                onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                Learn More →
+            </button>
+        </div>
+    </div>
+
+    
     <!-- -------------------------------
                 Footer Start
     ------------------------------- -->
@@ -298,7 +734,8 @@
                         <h5 class="footer-heading">Recent Posts</h5>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> August 6, 2024
@@ -308,7 +745,8 @@
                         </div>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> July 4, 2024
@@ -339,20 +777,20 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Smooth scroll and active link highlighting -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Update active link on scroll
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                
+
                 // Add your logic to determine which link should be active
                 // This is a simplified version - you'll need to implement
                 // your own logic based on your page sections
@@ -361,4 +799,5 @@
         });
     </script>
 </body>
+
 </html>
