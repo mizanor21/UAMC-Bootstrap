@@ -142,114 +142,100 @@
         }
 
 
-        /* hospital services  */
-        .stats-card {
-            padding: 40px 20px;
+        /* department  */
+        
+        .section-header {
             text-align: center;
+            margin-bottom: 2.5rem;
         }
-
-        .stats-divider {
-            width: 1px;
-            background-color: #c8cdd1;
-            height: 100px;
-            margin: 0 auto;
-        }
-
-        .stats-number {
-            font-size: 3.5rem;
+        
+        .section-title {
+            font-size: 2.5rem;
             font-weight: 700;
-            color: #0e8a3e;
-            line-height: 1.1;
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem;
         }
-
-        .stats-unit {
+        
+        .section-subtitle {
             font-size: 1rem;
-            color: #6c757d;
-            margin-bottom: 15px;
+            color: #555;
         }
-
-        .stats-label {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #212529;
+        
+        .department-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
         }
-
-        .additional-info {
-            margin-top: 25px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            padding: 20px 30px;
+        
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-
-        .additional-label {
-            font-weight: 600;
+        
+        .department-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .department-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .department-card:hover .department-image img {
+            transform: scale(1.05);
+        }
+        
+        .department-details {
+            padding: 1.25rem;
+        }
+        
+        .department-name {
             font-size: 1.1rem;
-            color: #343a40;
-            margin-right: 10px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
         }
-
-        .additional-text {
-            color: #495057;
-            font-size: 1rem;
+        
+        .department-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
         }
-
-        @media (max-width: 767px) {
-            .stats-divider {
-                width: 80%;
-                height: 1px;
-                margin: 30px auto;
+        
+        .btn-learn-more {
+            background-color: #198754;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-learn-more:hover {
+            background-color: #146c43;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 991px) {
+            .department-card {
+                margin-bottom: 20px;
             }
         }
-
-
-        /* emergecy  */
-        .item {
-            background-color: #e6f6e6;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-            position: relative;
-            cursor: pointer;
-        }
         
-        .item:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .item .arrow {
-            color: #28a745;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s ease;
-        }
-        
-        .item.active .arrow {
-            transform: translateY(-50%) rotate(90deg);
-        }
-        .service-details {
-            background-color: #ffffff;
-            border-radius: 0 0 8px 8px;
-            padding: 15px 20px;
-            margin-top: -15px;
-            margin-bottom: 15px;
-            border: 1px solid #e8f5e8;
-            border-top: none;
-            display: none; /* Hidden by default */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        }
-        
-        .service-details ul {
-            margin-bottom: 0;
-            padding-left: 20px;
-        }
-        
-        .service-details p {
-            margin-bottom: 10px;
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .department-image {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -333,7 +319,7 @@
                         <p class="breadcrumb-text">
                             <a href="/" class="text-decoration-none text-secondary ">Home</a>
                             <span class="text-muted">&gt;</span>
-                            <span class="text-primary">Library</span>
+                            <span class="text-primary">Departments</span>
                         </p>
                         <h1 class="banner-title">Facilites UAMC</h1>
                     </div>
@@ -352,8 +338,8 @@
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="/hospital-services.html" class="btn btn-secondary fw-medium px-4 py-3 "
                         style="min-width: 220px;">Hospital Services</a>
-                    <a href="/departments.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Departmnts</a>
-                    <a href="/library.html" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Library</a>
+                    <a href="/departments.html" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Departmnts</a>
+                    <a href="/library.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Library</a>
                     <a href="/medical-education-unit.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Medical
                         Education Unit</a>
                     <a href="/training.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Training</a>
@@ -367,227 +353,131 @@
         </div>
     </div>
 
-    <!-- Library  -->
-    <div class="header-section" style="background-color: rgba(199, 244, 217, 0.3); padding: 80px 0;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="d-flex align-items-center">
-                        <div class=" me-4">
-                            <img src="/assets/images/admission/hospital-svgrepo.png" alt="">
-                            <!-- <i class="fas fa-hospital hospital-icon"></i> -->
-                        </div>
-                        <div>
-                            <h1>
-                                <span class="heading-admission">About the</span><br>
-                                <span class="heading-fees text-success">Library</span>
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <p class="description">
-                        <strong>Uttara Adhunik Medical College (UAMC)</strong> is the teaching and training
-                        hospital of the college. It is a 500-bedded, multidisciplinary tertiary care
-                        facility located in Uttara, Dhaka. The hospital serves patients from all over
-                        the country, particularly from Uttara, Tongi, Gazipur, and Savar.
-                    </p>
-                </div>
-            </div>
+    <!-- Department section  -->
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title">Departments</h1>
+            <p class="section-subtitle">List of academic and clinical departments with their establishment dates.</p>
         </div>
-        <div class="admission-banner container mt-5">
-            <img src="/assets/images/admission/admission.png" alt="Medical students discussing in hospital corridor"
-                class="img-fluid w-100">
-        </div>
-
-        <!-- Admission Procedure Section End -->
-        <div class="stats-container">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <div class="stats-card">
-                            <div class="row align-items-center">
-                                <div class="col-md-5">
-                                    <div class="stats-number">87,260.035</div>
-                                    <div class="stats-unit">sq. ft. (5 Bighas)</div>
-                                    <div class="stats-label">Total Land Area</div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="stats-divider"></div>
-                                </div>
-
-                                <div class="col-md-5">
-                                    <div class="stats-number">17</div>
-                                    <div class="stats-unit">Storied</div>
-                                    <div class="stats-label">Main Building</div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- <div class="row">
-                            <div class="col-md-12 text-center">
-                                <span class="additional-label">Additional Structures:</span>
-                                <span class="additional-text">Separate buildings for Radiology, Orthopedics, ENT, Dental & Emergency Departments</span>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Student & Faculty Facilities  -->
-    <div class="container py-5">
-        <h1 class="mb-4">Student & Faculty Facilities</h1>
         
         <div class="row">
-            <div class="col-md-6">
-                <div class="service-item">
-                    <div class="item" data-bs-target="#emergency-services">
-                        <span style="font-weight: 600;">24/7 Emergency Services</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
+            <!-- Department 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="College and Hospital Administration">
                     </div>
-                    <div class="service-details" id="emergency-services">
-                        <p>Our emergency department is staffed 24/7 with experienced physicians and nurses ready to handle all types of emergencies.</p>
-                        <ul>
-                            <li>Trauma care</li>
-                            <li>Cardiac emergencies</li>
-                            <li>Stroke treatment</li>
-                            <li>Pediatric emergencies</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="item" data-bs-target="#ambulance1">
-                        <span style="font-weight: 600;">Ambulance Services</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service-details" id="ambulance1">
-                        <p>Emergency medical transport with fully equipped ambulances and trained paramedics.</p>
-                        <ul>
-                            <li>Basic life support</li>
-                            <li>Advanced life support</li>
-                            <li>Neonatal transport</li>
-                            <li>GPS tracking for quick response</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="item" data-bs-target="#icu">
-                        <span style="font-weight: 600;">ICU (Intensive Care Unit) – 20 beds, 17 ventilators (10th floor)</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service-details" id="icu">
-                        <p>State-of-the-art intensive care unit for critically ill patients requiring continuous monitoring.</p>
-                        <ul>
-                            <li>20 fully equipped beds</li>
-                            <li>17 high-capacity ventilators</li>
-                            <li>24/7 intensivist coverage</li>
-                            <li>Advanced monitoring systems</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="item" data-bs-target="#ccu">
-                        <span style="font-weight: 600;">CCU (Coronary Care Unit) – 17 beds (3rd floor)</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service-details" id="ccu">
-                        <p>Specialized unit for patients with severe cardiac conditions requiring constant care.</p>
-                        <ul>
-                            <li>17 cardiac monitoring beds</li>
-                            <li>Immediate access to cardiac catheterization</li>
-                            <li>Specialized cardiac nursing team</li>
-                            <li>Advanced cardiac life support</li>
-                        </ul>
+                    <div class="department-details">
+                        <h3 class="department-name">College and Hospital Administration</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-6">
-                <div class="service-item">
-                    <div class="item" data-bs-target="#nicu">
-                        <span style="font-weight: 600;">NICU (Neonatal Intensive Care Unit) – For critical neonatal cases</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
+            <!-- Department 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Physiology">
                     </div>
-                    <div class="service-details" id="nicu">
-                        <p>Specialized care for premature and critically ill newborns with advanced monitoring.</p>
-                        <ul>
-                            <li>Level III NICU capabilities</li>
-                            <li>Specialized neonatal ventilators</li>
-                            <li>Neonatologists available 24/7</li>
-                            <li>Family-centered care approach</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="item" data-bs-target="#ambulance2">
-                        <span style="font-weight: 600;">Ambulance Services</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service-details" id="ambulance2">
-                        <p>Specialized ambulance services for various emergency situations.</p>
-                        <ul>
-                            <li>Rapid response time</li>
-                            <li>Trained emergency medical technicians</li>
-                            <li>Life-saving equipment on board</li>
-                            <li>Inter-facility transfers available</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="item" data-bs-target="#dialysis">
-                        <span style="font-weight: 600;">Haemodialysis Unit</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service-details" id="dialysis">
-                        <p>Comprehensive renal replacement therapy for patients with kidney failure.</p>
-                        <ul>
-                            <li>Modern dialysis machines</li>
-                            <li>Specialized nephrology team</li>
-                            <li>Regular and emergency dialysis services</li>
-                            <li>Comfortable treatment environment</li>
-                        </ul>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Physiology</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Department 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Microbiology">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Microbiology</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Dept. of Community Medicine">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Dept. of Community Medicine</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Pathology">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Pathology</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department 6 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Dermatology">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Dermatology</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department 7 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Otolaryngology (ENT)">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Otolaryngology (ENT - Head & Neck)</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department 8 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-image">
+                        <img src="/assets/images/department.png" alt="Department of Orthopedics">
+                    </div>
+                    <div class="department-details">
+                        <h3 class="department-name">Department of Orthopedics</h3>
+                        <p class="department-date">Established: February 19, 2025</p>
+                        <a href="#" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More departments can be added here following the same structure -->
+            
         </div>
     </div>
+
 
     <!-- -------------------------------
                 Footer Start
