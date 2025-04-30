@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttara Adhunik Medical College</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/notice.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            --primary-color: #0d6efd;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand h5 {
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: 0.2rem;
+        }
+
+        .navbar-brand small {
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+            padding: 0.5rem 1rem !important;
+            color: #333 !important;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            right: 1rem;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .dropdown-menu {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 220px;
+        }
+
+        .dropdown-item {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            padding: 0.65rem 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
+            color: var(--primary-color) !important;
+            transform: translateX(5px);
+        }
+
+        .dropdown-toggle::after {
+            transition: transform 0.2s ease;
+        }
+
+        .show>.dropdown-toggle::after {
+            transform: rotate(-180deg);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: var(--glass-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 0 0 12px 12px;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                box-shadow: var(--glass-shadow);
+            }
+
+            .dropdown-menu {
+                background: rgba(255, 255, 255, 0.95);
+                margin-left: 1rem;
+                border-left: 3px solid var(--primary-color);
+                box-shadow: none;
+            }
+
+            .nav-link {
+                padding: 0.5rem 0 !important;
+            }
+        }
+
+        /* Logo sizing */
+        .navbar-brand img {
+            width: clamp(50px, 5vw, 60px);
+            height: auto;
+        }
+
+
+        /* emergecy  */
+        .item {
+            background-color: #e6f6e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item .arrow {
+            color: #28a745;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        
+        .item.active .arrow {
+            transform: translateY(-50%) rotate(90deg);
+        }
+        .service-details {
+            background-color: #ffffff;
+            border-radius: 0 0 8px 8px;
+            padding: 15px 20px;
+            margin-top: -15px;
+            margin-bottom: 15px;
+            border: 1px solid #e8f5e8;
+            border-top: none;
+            display: none; /* Hidden by default */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-details ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+        
+        .service-details p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/assets/logo/logo.png" alt="UAMC" class="me-2">
+                <div>
+                    <h5 class="mb-0">Uttara Adhunik</h5>
+                    <small>Medical College (UAMC)</small>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Home Link -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">HOME</a>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT UAMC
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
+                            <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
+                            <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
+                            <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
+                            <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Facilities Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/facilities">FACILITIES</a>
+                    </li>
+
+                    <!-- Admission Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admission">ADMISSION</a>
+                    </li>
+
+                    <!-- Notice & Media Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NOTICE & MEDIA</a>
+                    </li>
+
+                    <!-- Career Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/career">CAREER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner-section" style="margin-top: 75px;">
+        <div class="banner-overlay ">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">Medical Education Unit</span>
+                        </p>
+                        <h1 class="banner-title">Facilites UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="p-4">
+        <div class="row justify-content-center py-5">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="/hospital-services.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Hospital Services</a>
+                    <a href="/departments.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Departmnts</a>
+                    <a href="/library.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Library</a>
+                    <a href="/medical-education-unit.html" class="btn btn-success fw-medium px-4 py-3 " style="min-width: 220px; border: 1px dashed #ffffff;">Medical
+                        Education Unit</a>
+                    <a href="/training.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Training</a>
+                    <a href="/publication.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Publication</a>
+                    <a href="/seminar.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Seminar</a>
+                    <a href="/hotel.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Hotel</a>
+                    <a href="/laboratory.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Laboratory</a>
+                    <a href="/cafeteria.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Cafeteria</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Education Unit  -->
+    <div class="header-section" style="background-color: rgba(199, 244, 217, 0.3); padding: 80px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <div class=" me-4">
+                            <img src="/assets/images/admission/hospital-svgrepo.png" alt="">
+                            <!-- <i class="fas fa-hospital hospital-icon"></i> -->
+                        </div>
+                        <div>
+                            <h1>
+                                <span class="heading-admission">Medical Education 
+                                    Unit</span><br>
+                                <span class="heading-fees text-success">(MEU)</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="description">
+                        <strong>Uttara Adhunik Medical College (UAMC)</strong> is the teaching and training
+                        hospital of the college. It is a 500-bedded, multidisciplinary tertiary care
+                        facility located in Uttara, Dhaka. The hospital serves patients from all over
+                        the country, particularly from Uttara, Tongi, Gazipur, and Savar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="admission-banner container mt-5">
+            <img src="/assets/images/admission/admission.png" alt="Medical students discussing in hospital corridor"
+                class="img-fluid w-100">
+        </div>
+    </div>
+
+    <!-- Facilities & Resources  -->
+    <div class="container py-5">
+        <h1 class="mb-4">Facilities & Resources</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#emergency-services">
+                        <span style="font-weight: 600;">24/7 Emergency Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="emergency-services">
+                        <p>Our emergency department is staffed 24/7 with experienced physicians and nurses ready to handle all types of emergencies.</p>
+                        <ul>
+                            <li>Trauma care</li>
+                            <li>Cardiac emergencies</li>
+                            <li>Stroke treatment</li>
+                            <li>Pediatric emergencies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance1">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance1">
+                        <p>Emergency medical transport with fully equipped ambulances and trained paramedics.</p>
+                        <ul>
+                            <li>Basic life support</li>
+                            <li>Advanced life support</li>
+                            <li>Neonatal transport</li>
+                            <li>GPS tracking for quick response</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#icu">
+                        <span style="font-weight: 600;">ICU (Intensive Care Unit) – 20 beds, 17 ventilators (10th floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="icu">
+                        <p>State-of-the-art intensive care unit for critically ill patients requiring continuous monitoring.</p>
+                        <ul>
+                            <li>20 fully equipped beds</li>
+                            <li>17 high-capacity ventilators</li>
+                            <li>24/7 intensivist coverage</li>
+                            <li>Advanced monitoring systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ccu">
+                        <span style="font-weight: 600;">CCU (Coronary Care Unit) – 17 beds (3rd floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ccu">
+                        <p>Specialized unit for patients with severe cardiac conditions requiring constant care.</p>
+                        <ul>
+                            <li>17 cardiac monitoring beds</li>
+                            <li>Immediate access to cardiac catheterization</li>
+                            <li>Specialized cardiac nursing team</li>
+                            <li>Advanced cardiac life support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#nicu">
+                        <span style="font-weight: 600;">NICU (Neonatal Intensive Care Unit) – For critical neonatal cases</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="nicu">
+                        <p>Specialized care for premature and critically ill newborns with advanced monitoring.</p>
+                        <ul>
+                            <li>Level III NICU capabilities</li>
+                            <li>Specialized neonatal ventilators</li>
+                            <li>Neonatologists available 24/7</li>
+                            <li>Family-centered care approach</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance2">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance2">
+                        <p>Specialized ambulance services for various emergency situations.</p>
+                        <ul>
+                            <li>Rapid response time</li>
+                            <li>Trained emergency medical technicians</li>
+                            <li>Life-saving equipment on board</li>
+                            <li>Inter-facility transfers available</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#dialysis">
+                        <span style="font-weight: 600;">Haemodialysis Unit</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="dialysis">
+                        <p>Comprehensive renal replacement therapy for patients with kidney failure.</p>
+                        <ul>
+                            <li>Modern dialysis machines</li>
+                            <li>Specialized nephrology team</li>
+                            <li>Regular and emergency dialysis services</li>
+                            <li>Comfortable treatment environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Databases  -->
+    <div class="container py-5">
+        <h1 class="mb-4">Academic Databases</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#emergency-services">
+                        <span style="font-weight: 600;">24/7 Emergency Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="emergency-services">
+                        <p>Our emergency department is staffed 24/7 with experienced physicians and nurses ready to handle all types of emergencies.</p>
+                        <ul>
+                            <li>Trauma care</li>
+                            <li>Cardiac emergencies</li>
+                            <li>Stroke treatment</li>
+                            <li>Pediatric emergencies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance1">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance1">
+                        <p>Emergency medical transport with fully equipped ambulances and trained paramedics.</p>
+                        <ul>
+                            <li>Basic life support</li>
+                            <li>Advanced life support</li>
+                            <li>Neonatal transport</li>
+                            <li>GPS tracking for quick response</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#icu">
+                        <span style="font-weight: 600;">ICU (Intensive Care Unit) – 20 beds, 17 ventilators (10th floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="icu">
+                        <p>State-of-the-art intensive care unit for critically ill patients requiring continuous monitoring.</p>
+                        <ul>
+                            <li>20 fully equipped beds</li>
+                            <li>17 high-capacity ventilators</li>
+                            <li>24/7 intensivist coverage</li>
+                            <li>Advanced monitoring systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ccu">
+                        <span style="font-weight: 600;">CCU (Coronary Care Unit) – 17 beds (3rd floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ccu">
+                        <p>Specialized unit for patients with severe cardiac conditions requiring constant care.</p>
+                        <ul>
+                            <li>17 cardiac monitoring beds</li>
+                            <li>Immediate access to cardiac catheterization</li>
+                            <li>Specialized cardiac nursing team</li>
+                            <li>Advanced cardiac life support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#nicu">
+                        <span style="font-weight: 600;">NICU (Neonatal Intensive Care Unit) – For critical neonatal cases</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="nicu">
+                        <p>Specialized care for premature and critically ill newborns with advanced monitoring.</p>
+                        <ul>
+                            <li>Level III NICU capabilities</li>
+                            <li>Specialized neonatal ventilators</li>
+                            <li>Neonatologists available 24/7</li>
+                            <li>Family-centered care approach</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance2">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance2">
+                        <p>Specialized ambulance services for various emergency situations.</p>
+                        <ul>
+                            <li>Rapid response time</li>
+                            <li>Trained emergency medical technicians</li>
+                            <li>Life-saving equipment on board</li>
+                            <li>Inter-facility transfers available</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#dialysis">
+                        <span style="font-weight: 600;">Haemodialysis Unit</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="dialysis">
+                        <p>Comprehensive renal replacement therapy for patients with kidney failure.</p>
+                        <ul>
+                            <li>Modern dialysis machines</li>
+                            <li>Specialized nephrology team</li>
+                            <li>Regular and emergency dialysis services</li>
+                            <li>Comfortable treatment environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Activities  -->
+    <div class="container py-5">
+        <h1 class="mb-4">Academic Activities</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#emergency-services">
+                        <span style="font-weight: 600;">24/7 Emergency Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="emergency-services">
+                        <p>Our emergency department is staffed 24/7 with experienced physicians and nurses ready to handle all types of emergencies.</p>
+                        <ul>
+                            <li>Trauma care</li>
+                            <li>Cardiac emergencies</li>
+                            <li>Stroke treatment</li>
+                            <li>Pediatric emergencies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance1">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance1">
+                        <p>Emergency medical transport with fully equipped ambulances and trained paramedics.</p>
+                        <ul>
+                            <li>Basic life support</li>
+                            <li>Advanced life support</li>
+                            <li>Neonatal transport</li>
+                            <li>GPS tracking for quick response</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#icu">
+                        <span style="font-weight: 600;">ICU (Intensive Care Unit) – 20 beds, 17 ventilators (10th floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="icu">
+                        <p>State-of-the-art intensive care unit for critically ill patients requiring continuous monitoring.</p>
+                        <ul>
+                            <li>20 fully equipped beds</li>
+                            <li>17 high-capacity ventilators</li>
+                            <li>24/7 intensivist coverage</li>
+                            <li>Advanced monitoring systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ccu">
+                        <span style="font-weight: 600;">CCU (Coronary Care Unit) – 17 beds (3rd floor)</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ccu">
+                        <p>Specialized unit for patients with severe cardiac conditions requiring constant care.</p>
+                        <ul>
+                            <li>17 cardiac monitoring beds</li>
+                            <li>Immediate access to cardiac catheterization</li>
+                            <li>Specialized cardiac nursing team</li>
+                            <li>Advanced cardiac life support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="service-item">
+                    <div class="item" data-bs-target="#nicu">
+                        <span style="font-weight: 600;">NICU (Neonatal Intensive Care Unit) – For critical neonatal cases</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="nicu">
+                        <p>Specialized care for premature and critically ill newborns with advanced monitoring.</p>
+                        <ul>
+                            <li>Level III NICU capabilities</li>
+                            <li>Specialized neonatal ventilators</li>
+                            <li>Neonatologists available 24/7</li>
+                            <li>Family-centered care approach</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#ambulance2">
+                        <span style="font-weight: 600;">Ambulance Services</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="ambulance2">
+                        <p>Specialized ambulance services for various emergency situations.</p>
+                        <ul>
+                            <li>Rapid response time</li>
+                            <li>Trained emergency medical technicians</li>
+                            <li>Life-saving equipment on board</li>
+                            <li>Inter-facility transfers available</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="item" data-bs-target="#dialysis">
+                        <span style="font-weight: 600;">Haemodialysis Unit</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="service-details" id="dialysis">
+                        <p>Comprehensive renal replacement therapy for patients with kidney failure.</p>
+                        <ul>
+                            <li>Modern dialysis machines</li>
+                            <li>Specialized nephrology team</li>
+                            <li>Regular and emergency dialysis services</li>
+                            <li>Comfortable treatment environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+                Footer Start
+    ------------------------------- -->
+    <footer>
+        <!-- Newsletter Section -->
+        <div class="newsletter-section bg-black text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2>Subscribe To Newsletter</h2>
+                    </div>
+                    <div class="col-md-5">
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter Your mail">
+                            <button class="submit-btn px-4 py-3 d-flex align-items-center gap-2" type="submit">Submit <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Main Content -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- College Info -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="/assets/logo/logo.png" alt="Uttara Adhunik Medical College Logo" width="60">
+                            <div class="ms-3">
+                                <h5 class="mb-0">Uttara Adhunik</h5>
+                                <p class="mb-0">Medical College (UAMC)</p>
+                            </div>
+                        </div>
+                        <p>We are passionate education dedicated to providing high-quality resources learners all
+                            backgrounds.</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Uttara, Dhaka, Bangladesh</p>
+                        <p><i class="fas fa-phone me-2"></i> 485-826-710</p>
+                    </div>
+
+                    <!-- Our Campus -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Campus</h5>
+                        <div class="footer-links">
+                            <a href="#">Academic</a>
+                            <a href="#">Athletics</a>
+                            <a href="#">Campus life</a>
+                            <a href="#">Research</a>
+                            <a href="#">Academic Area</a>
+                        </div>
+                    </div>
+
+                    <!-- Our Pages -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Our Pages</h5>
+                        <div class="footer-links">
+                            <a href="#">About</a>
+                            <a href="#">Tution Fee</a>
+                            <a href="#">Alumni</a>
+                            <a href="#">Faculty Staff</a>
+                            <a href="#">Event</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">Recent Posts</h5>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> August 6, 2024
+                                </div>
+                                <h6>Those Inequalities Are Inequalities That</h6>
+                            </div>
+                        </div>
+
+                        <div class="recent-post">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="far fa-calendar me-1"></i> July 4, 2024
+                                </div>
+                                <h6>After Decades Of Improvement, Cardiovascular</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom / Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">Copyright @ <span id="currentYear"></span>. All Rights Reserved by <a href="#"
+                                class="text-white">UAMC</a></p>
+                        <script>
+                            document.getElementById('currentYear').textContent = new Date().getFullYear();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth scroll and active link highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update active link on scroll
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Add your logic to determine which link should be active
+                // This is a simplified version - you'll need to implement
+                // your own logic based on your page sections
+                document.querySelector('.nav-link[href="/"]').classList.add('active');
+            });
+        });
+    </script>
+
+<script>
+    // Fix for dropdown visibility and card active state
+    document.addEventListener('DOMContentLoaded', function() {
+        const serviceCards = document.querySelectorAll('.item');
+        
+        serviceCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const target = this.getAttribute('data-bs-target');
+                const detailsPanel = document.querySelector(target);
+                
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Manually toggle the dropdown
+                if (detailsPanel.style.display === 'block') {
+                    detailsPanel.style.display = 'none';
+                } else {
+                    detailsPanel.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>
+</body>
+
+</html>
