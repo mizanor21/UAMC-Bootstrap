@@ -134,6 +134,114 @@
             width: clamp(50px, 5vw, 60px);
             height: auto;
         }
+
+        /* founder  */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+            text-align: center;
+        }
+        
+        .founder-card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .founder-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .founder-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .founder-bio {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 128, 0, 0.9), rgba(0, 128, 0, 0.7), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(calc(100% - 80px));
+            transition: all 0.4s ease;
+            min-height: 250px;
+        }
+        
+        .founder-card:hover .founder-bio {
+            transform: translateY(0);
+        }
+        
+        .founder-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .founder-title {
+            color: #c8e6c9;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .founder-details {
+            margin-top: 15px;
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .founder-card:hover .founder-details {
+            opacity: 1;
+        }
+
+        @media (max-width: 992px) {
+            .founder-bio {
+                transform: translateY(calc(100% - 70px));
+            }
+
+            .founder-name {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .founder-image img {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .founder-bio {
+                transform: translateY(0);
+                position: relative;
+                background: linear-gradient(to right, #4caf50, #2e7d32);
+            }
+
+            .founder-details {
+                opacity: 1;
+            }
+
+            .founder-card:hover {
+                transform: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -214,7 +322,7 @@
                     <p class="breadcrumb-text">
                         <a href="/" class="text-decoration-none text-secondary ">Home</a> 
                         <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Notice & Media</span>
+                        <span class="text-primary">Founder Member</span>
                     </p>
                     <h1 class="banner-title">About UAMC</h1>
                   </div>
@@ -224,6 +332,66 @@
                 </div>
               </div>
               
+        </div>
+    </div>
+
+    <!-- Funder Members Section  -->
+    <div class="container py-5">
+        <h1 class="section-title mb-5">Founder Members</h1>
+        
+        <div class="row g-4">
+            <!-- Founder 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="/assets/images/member/founder.png" alt="Late Prof. Mohammad Yousuf Ali">
+                        <div class="founder-bio">
+                            <h3 class="founder-name">Late Prof. Mohammad Yousuf Ali</h3>
+                            <p class="founder-title">Ex-Chairman, EC, BMSRI</p>
+                            <div class="founder-details">
+                                <p>Late Prof. Mohammad Yousuf Ali served as the Ex-Chairman of the Executive Committee at BMSRI. His visionary leadership was instrumental in establishing educational standards and shaping the foundation of medical education in Bangladesh.</p>
+                                <p>His dedication to excellence and commitment to healthcare education continues to inspire generations of medical professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Founder 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="/assets/images/member/member2.png" alt="Late Mr. M.M. Zaman">
+                        <div class="founder-bio">
+                            <h3 class="founder-name">Late Mr. M.M. Zaman</h3>
+                            <p class="founder-title">Ex-Co-Chairman, EC, BMSRI</p>
+                            <div class="founder-details">
+                                <p>Late Mr. M.M. Zaman, the Ex-Co-Chairman of the Executive Committee, BMSRI, played a pivotal role in advancing private medical education in Bangladesh.</p>
+                                <p>His unwavering commitment and leadership contributed significantly to the establishment and growth of Bangladesh Medical College and UAMC. His legacy remains a guiding force in shaping future medical professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Founder 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="/assets/images/member/member3.png" alt="Late Prof. Abu Ahmed">
+                        <div class="founder-bio">
+                            <h3 class="founder-name">Late Prof. Abu Ahmed</h3>
+                            <p class="founder-title">Ex-Co-Chairman, EC, BMSRI</p>
+                            <div class="founder-details">
+                                <p>Late Prof. Abu Ahmed served as Ex-Co-Chairman of the Executive Committee at BMSRI. His innovative approach to medical education helped establish strong academic foundations.</p>
+                                <p>Throughout his distinguished career, Prof. Ahmed championed educational reforms and quality standards that continue to influence medical training programs across Bangladesh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Founders can be added here following the same structure -->
         </div>
     </div>
 
