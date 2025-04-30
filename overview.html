@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="/styles/about/overview.css">
+    <link rel="stylesheet" href="/styles/about/overview.css">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.85);
@@ -19,12 +21,12 @@
             --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             --primary-color: #0d6efd;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
-        
+
         .navbar {
             background: var(--glass-bg) !important;
             backdrop-filter: blur(10px);
@@ -33,17 +35,17 @@
             box-shadow: var(--glass-shadow);
             transition: all 0.3s ease;
         }
-        
+
         .navbar-brand h5 {
             font-weight: 700;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
             margin-bottom: 0.2rem;
         }
-        
+
         .navbar-brand small {
             font-size: clamp(0.7rem, 1vw, 0.85rem);
         }
-        
+
         .nav-link {
             font-weight: 500;
             font-size: clamp(0.85rem, 1.1vw, 1rem);
@@ -51,18 +53,19 @@
             color: #333 !important;
             transition: all 0.2s ease;
         }
-        
-        .nav-link:hover, .nav-link:focus {
+
+        .nav-link:hover,
+        .nav-link:focus {
             color: var(--primary-color) !important;
             transform: translateY(-2px);
         }
-        
+
         .nav-link.active {
             color: var(--primary-color) !important;
             font-weight: 600;
             position: relative;
         }
-        
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -73,7 +76,7 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
+
         .dropdown-menu {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -84,27 +87,28 @@
             overflow: hidden;
             min-width: 220px;
         }
-        
+
         .dropdown-item {
             font-size: clamp(0.8rem, 1vw, 0.9rem);
             padding: 0.65rem 1.25rem;
             transition: all 0.2s ease;
         }
-        
-        .dropdown-item:hover, .dropdown-item:focus {
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
             background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
             color: var(--primary-color) !important;
             transform: translateX(5px);
         }
-        
+
         .dropdown-toggle::after {
             transition: transform 0.2s ease;
         }
-        
-        .show > .dropdown-toggle::after {
+
+        .show>.dropdown-toggle::after {
             transform: rotate(-180deg);
         }
-        
+
         /* Mobile adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
@@ -116,26 +120,188 @@
                 margin-top: 0.5rem;
                 box-shadow: var(--glass-shadow);
             }
-            
+
             .dropdown-menu {
                 background: rgba(255, 255, 255, 0.95);
                 margin-left: 1rem;
                 border-left: 3px solid var(--primary-color);
                 box-shadow: none;
             }
-            
+
             .nav-link {
                 padding: 0.5rem 0 !important;
             }
         }
-        
+
         /* Logo sizing */
         .navbar-brand img {
             width: clamp(50px, 5vw, 60px);
             height: auto;
         }
+
+        /* about uamc */
+        .text-highlight {
+            color: #FFB400;
+        }
+
+        .text-accent {
+            color: #28A745;
+        }
+
+        .btn-outline-accent {
+            color: #28A745;
+            border-color: #28A745;
+        }
+
+        .college-logo {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .img-overlay {
+            position: relative;
+        }
+
+        .custom-button {
+            background-color: #28A745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .custom-button:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .btn-outline-green {
+            color: #28A745;
+            border: 1px dashed #28A745;
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .btn-outline-green:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* feature part  */
+        .feature-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://i.postimg.cc/kGpkBp9L/cam1.jpg');
+        }
+
+        .bg-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+        }
+
+        .bg-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.3;
+        }
+
+        .stats-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            background-color: rgba(0, 100, 0, 0.85);
+            padding: 1.5rem;
+            color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .feature-container {
+                height: 300px;
+            }
+
+            .stats-box {
+                width: 80%;
+                padding: 3rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-container {
+                height: 400px;
+            }
+
+            .stats-box {
+                width: 75%;
+            }
+        }
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        .stat-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-desc {
+            font-size: 1rem;
+            color: #FECD2F;
+        }
+
+        @media (min-width: 768px) {
+            .stat-title {
+                font-size: 2.75rem;
+            }
+
+            .stat-desc {
+                font-size: 1.125rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .stat-title {
+                font-size: 4.5rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -148,13 +314,13 @@
                     <small>Medical College (UAMC)</small>
                 </div>
             </a>
-            
+
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -162,11 +328,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    
+
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             ABOUT UAMC
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -174,28 +340,29 @@
                             <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
                             <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
                             <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
-                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
                             <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
                             <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
                             <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Facilities Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/facilities">FACILITIES</a>
                     </li>
-                    
+
                     <!-- Admission Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/admission">ADMISSION</a>
                     </li>
-                    
+
                     <!-- Notice & Media Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">NOTICE & MEDIA</a>
                     </li>
-                    
+
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
@@ -210,20 +377,20 @@
         <div class="banner-overlay ">
             <div class="container">
                 <div class="row align-items-end">
-                  <div class="col-md-8 mb-md-0">
-                    <p class="breadcrumb-text">
-                        <a href="/" class="text-decoration-none text-secondary ">Home</a> 
-                        <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Overview</span>
-                    </p>
-                    <h1 class="banner-title">About UAMC</h1>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
-                    <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
-                  </div>
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">Overview</span>
+                        </p>
+                        <h1 class="banner-title">About UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
         </div>
     </div>
 
@@ -234,13 +401,544 @@
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="#" class="btn btn-success fw-medium px-4 py-3 "
                         style="min-width: 220px; border: 1px dashed #ffffff;">Overview</a>
-                    <a href="/history-uamc.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">History of UAMC</a>
-                    <a href="/vission-mission.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Vision & Mission</a>
-                    <a href="/aim-objective.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Aim & Objective</a>
-                    <a href="organizational-structure.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Organizational Structure</a>
-                    <a href="/founder-members.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">Founder Members</a>
-                    <a href="/ec-members.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">EC Members</a>
-                    <a href="/gb-members.html" class="btn btn-secondary fw-medium px-4 py-3 " style="min-width: 220px;">GB Members</a>
+                    <a href="/history-uamc.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">History of UAMC</a>
+                    <a href="/vission-mission.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Vision & Mission</a>
+                    <a href="/aim-objective.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Aim & Objective</a>
+                    <a href="organizational-structure.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Organizational Structure</a>
+                    <a href="/founder-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">Founder Members</a>
+                    <a href="/ec-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">EC Members</a>
+                    <a href="/gb-members.html" class="btn btn-secondary fw-medium px-4 py-3 "
+                        style="min-width: 220px;">GB Members</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+                About UAMC Start
+    ------------------------------- -->
+    <div class="container my-5">
+        <div class="d-md-flex align-items-center">
+            <!-- Left side images with logo overlay -->
+            <!-- Left Side - Images -->
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                <!-- Main Images -->
+                <div class="d-flex flex-row align-items-center justify-content-center gap-4 w-100 position-relative">
+                    <img src="https://i.postimg.cc/hvSrLjwn/Component-39.png" alt="College Building"
+                        class="w-50 rounded-lg shadow-lg" />
+                    <!-- Logo Image in the Center -->
+                    <div
+                        class="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
+                        <img src="/assets/logo/logo.png" alt="logo" class="w-25 rounded-circle shadow-lg" />
+                    </div>
+                    <img src="https://i.postimg.cc/YqCRjvYf/Component-37.jpg" alt="College Entrance"
+                        class="w-50 rounded-lg shadow-lg" />
+                </div>
+            </div>
+
+            <!-- Right side content -->
+            <div class="col-md-7 d-flex flex-column justify-content-center ps-md-5">
+                <div class="text-accent fw-bold mt-5 mb-2">KNOWLEDGE MEETS INNOVATION</div>
+
+                <h1 class="display-4 fw-bold mb-4">About <span class="text-highlight">UAMC</span></h1>
+
+                <p class="mb-3">
+                    <strong>Uttara Adhunik Medical College (UAMC)</strong> is a prestigious medical institution located
+                    in Uttara Model Town, Dhaka, Bangladesh. Established in 2003.
+                </p>
+
+                <p class="mb-4">
+                    UAMC offers a Bachelor of Medicine and Bachelor of Surgery (MBBS) program, designed to equip
+                    students with the knowledge, skills, and hands-on clinical training needed to excel in the medical
+                    profession.
+                </p>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <button class="btn btn-outline-green w-100">College Mission Statement</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-outline-green w-100">College Vision Achievement</button>
+                    </div>
+                </div>
+
+                <button class="custom-button align-self-start">View Our Program →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            Find Your Department
+    ------------------------------- -->
+    <div class="bg-light py-5 px-3 px-md-4 px-lg-5 pt-5 pt-md-5">
+        <div class="container-xl">
+            <div class="row g-4">
+                <!-- Left Column - Text and Search -->
+                <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                    <h1 class="fs-2 fs-md-1 fw-bold" style="color: #3c7a39;">
+                        Find Your Department
+                    </h1>
+
+                    <p class="text-secondary">
+                        Use the search bar below to explore our comprehensive
+                        <span class="fw-medium">MBBS program</span> and discover the
+                        perfect path to kickstart your medical career. Join
+                        <span class="fw-medium">UAMC</span> and embark on a journey
+                        of academic excellence, hands-on clinical training, and
+                        cutting-edge medical research!
+                    </p>
+
+                    <div class="position-relative">
+                        <div class="position-absolute top-50 start-0 translate-middle-y ms-3 pointer-events-none">
+                            <i class="bi bi-search text-muted fs-5"></i>
+                        </div>
+                        <input type="text" placeholder='Find your program like "Department of Phycology"'
+                            class="form-control ps-5 py-2" style="border-color: #dee2e6; border-radius: 0.375rem;" />
+                    </div>
+
+                    <div>
+                        <span class="text-secondary">Popular Search: </span>
+                        <div class="d-flex flex-wrap gap-1 mt-1">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Department of Microbiology
+                            </a>
+                            <span class="text-secondary mx-1">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Department of Community Medicine
+                            </a>
+                            <span class="text-secondary mx-1">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Department of Pathology
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Department Card -->
+                    <div
+                        class="border border-1 border-dashed rounded p-3 d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="position-relative"
+                                style="height: 5rem; width: 5rem; overflow: hidden; border-radius: 0.375rem;">
+                                <img src="https://i.postimg.cc/3RDNk2RL/team-young-specialist-doctors-standing-corridor-hospital.jpg"
+                                    alt="Department of Microbiology" class="object-fit-cover w-100 h-100" />
+                            </div>
+                            <div>
+                                <div class="badge bg-warning-subtle text-warning mb-1">
+                                    Popular Program
+                                </div>
+                                <h3 class="fs-5 fw-medium mb-0" style="color: #3c7a39;">
+                                    Department of Microbiology
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="rounded p-2" style="background-color: #3c7a39;">
+                            <svg class="bi bi-arrow-right ms-2" width="16" height="16" fill="white" viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Images -->
+                <div class="col-12 col-lg-6 position-relative" style="height: 500px;">
+                    <div class="row h-100 g-2">
+                        <div class="col-6 position-relative">
+                            <img src="https://i.postimg.cc/rpHzyf80/doctor-with-face-mask-against-covid19-discussing-with-nurse-hospital-waiting-area-disabled-senior-wo.jpg"
+                                alt="Doctor with patient" class="img-fluid object-fit-cover w-100 h-50" />
+                        </div>
+                        <div class="col-6 position-relative">
+                            <img src="https://i.postimg.cc/tJQTW7n9/background-focus-nurse-wearing-protective-mask-gloves-checking-clinical-x-ray-ct-scan-results-doctor.jpg"
+                                alt="Nurse checking x-ray" class="img-fluid object-fit-cover w-100 h-100" />
+                        </div>
+                    </div>
+
+                    <!-- Counter Badge -->
+                    <div class="position-absolute bottom-0 start-0 mb-5 ms-3 p-3 d-flex align-items-center gap-3"
+                        style="background-color: rgba(1, 136, 55, 0.8);">
+                        <div class="position-relative" style="height: 3.5rem; width: 3.5rem;">
+                            <img src="https://i.ibb.co/j9qLP9Kd/171328095-10677961.png" alt="Department icon"
+                                class="img-fluid object-fit-contain w-100 h-100" />
+                        </div>
+                        <div>
+                            <h3 class="fs-1 fw-bold text-white mb-0">28+</h3>
+                            <p class="fs-5 text-white mb-0">Department Available For</p>
+                            <p class="fs-5 text-white mb-0">Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            Feature Start
+    ------------------------------- -->
+    <div class="feature-container">
+        <div class="bg-overlay"></div>
+
+        <div class="stats-box d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Stat 1 -->
+            <div class="stat-item  border-md-right pb-4 pb-md-0">
+                <h2 class="stat-title">90%</h2>
+                <p class="stat-desc pb-0 mb-0">Post Graduation</p>
+                <p class="stat-desc">Success Rate</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-item border-md-right pb-4 pb-md-0">
+                <h2 class="stat-title">Top 10</h2>
+                <p class="stat-desc pb-0 mb-0">Colleges That</p>
+                <p class="stat-desc">Create Futures</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-item">
+                <h2 class="stat-title">No.1</h2>
+                <p class="stat-desc pb-0 mb-0">In The Nation For</p>
+                <p class="stat-desc">Materials R&D</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            Principle Message Start
+    ------------------------------- -->
+    <div class="bg-success bg-opacity-10 ">
+        <div class="container py-5">
+            <!-- Header with icon and text -->
+            <div class="d-flex align-items-center justify-content-center gap-2 text-success mb-4">
+                <svg class="bi bi-mortarboard-fill" width="24" height="24" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+                <span class="fs-5">knowledge meets innovation</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="fs-3 fs-b-1 fw-bold text-center mb-5">
+                Message from the <span class="text-warning">Principal</span>
+            </h1>
+
+            <!-- Main content -->
+            <div class="d-flex flex-column flex-md-row gap-4 align-items-center">
+                <!-- Left side with signature and info -->
+                <div class="col-12 col-md-6">
+                    <!-- Signature image -->
+                    <div class="mb-4">
+                        <img src="https://i.postimg.cc/D0st4zNK/signature.png" alt="Principal's Signature"
+                            class="w-25" />
+                    </div>
+
+                    <!-- Principal info -->
+                    <h2 class="fs-4 mb-1">Honorable</h2>
+                    <h3 class="fs-3 text-success fw-bold mb-3">
+                        Prof. Dr. Mohammad Mohibur Rahman
+                    </h3>
+                    <div class="mb-4">
+                        <h2 class=" fw-bold d-flex align-items-baseline">
+                            <span class="fs-1 fs-md-1">Principal</span>
+                            <sub class="fs-6 ms-2">(In Charge)</sub>
+                        </h2>
+                    </div>
+
+                    <h4 class="fs-4 fw-semibold mb-3">
+                        Ensuring Quality Healthcare & Medical Education
+                    </h4>
+
+                    <!-- Message content -->
+                    <p class=" mb-3">
+                        Bangladesh faces significant challenges in delivering healthcare
+                        nationwide. To support government efforts,
+                        <strong>Uttara Adhunik Medical College Hospital (UAMCH)</strong>
+                        has been providing comprehensive health services since 2003,
+                        evolving into a tertiary-level multidisciplinary hospital.
+                    </p>
+
+                    <!-- Read more button -->
+                    <div class="mt-4">
+                        <button class="btn btn-success px-4 py-2 d-flex align-items-center">
+                            Read More
+                            <svg class="bi bi-arrow-right ms-2" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right side with image -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative">
+                        <img src="https://i.postimg.cc/HWBWTvgW/man.jpg" alt="Principal"
+                            class="img-fluid rounded shadow" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            UAMC Admission Start
+    ------------------------------- -->
+    <div class="position-relative w-100 vh-75 d-flex justify-content-center align-items-center px-4" style="
+    background-image: url('https://i.postimg.cc/YCkWTD9t/unnamed.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  ">
+        <!-- Green Overlay -->
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-success bg-opacity-75 "></div>
+
+        <!-- Content with Glass Effect -->
+        <div class="position-relative text-center text-white mx-md-5 px-3 px-md-5 py-4 bg-dark bg-opacity-10"
+            style="backdrop-filter: blur(8px);">
+            <h2 class="display-4 fw-bold">
+                <span style="color: #FECD2F;">UAMC</span> Admission
+            </h2>
+            <p class="mt-4 text-start text-md-center">
+                Uttara Adhunik Medical College (UAMC) was established in 2003 with a
+                vision to provide quality medical education and healthcare services.
+                Founded through the dedicated efforts of medical professionals and
+                social leaders, UAMC is committed to training future doctors while
+                ensuring affordable healthcare for the community.
+            </p>
+            <button class="mt-4 px-5 py-3 btn btn-success d-flex align-items-center gap-2 mx-auto"
+                style="transition: all 0.3s;"
+                onmouseover="this.style.backgroundColor='#FECD2F'; this.style.color='black';"
+                onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                Learn More →
+            </button>
+        </div>
+    </div>
+
+    <!-- -------------------------------
+            Student Feedback Start
+    ------------------------------- -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5" style="color: #018837;">My Students Feedback</h2>
+                <p class="text-secondary mt-4">You'll find something to spark your curiosity and enhance</p>
+            </div>
+
+            <!-- Carousel -->
+            <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel content -->
+                <div class="carousel-inner">
+                    <!-- First page -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <!-- Feedback 1 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Emma Elizabeth"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Emma Elizabeth</h5>
+                                                <small class="text-dark">Assistant Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feedback 2 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Zent Ekizie"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Zent Ekizie</h5>
+                                                <small class="text-dark">Assistant Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feedback 3 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Samantha Willow"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Samantha Willow</h5>
+                                                <small class="text-dark">Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second page -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <!-- Feedback 4 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Emma Elizabeth"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Emma Elizabeth</h5>
+                                                <small class="text-dark">Assistant Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feedback 5 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Zent Ekizie"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Zent Ekizie</h5>
+                                                <small class="text-dark">Assistant Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feedback 6 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text. It has roots in classical Latin literature from 45 BC, making it
+                                        over 2000 years old.</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/api/placeholder/48/48" alt="Soraz"
+                                                class="rounded-circle border border-2 border-success" width="48"
+                                                height="48">
+                                            <div class="ms-3">
+                                                <h5 class="mb-0" style="color: #018837;">Soraz</h5>
+                                                <small class="text-dark">Teacher</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-success">
+                                            <i class="fas fa-quote-right fs-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel indicators -->
+                <div class="text-center mt-4">
+                    <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0"
+                        class="btn btn-sm btn-warning rounded-circle mx-1 active" aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1"
+                        class="btn btn-sm btn-secondary rounded-circle mx-1" aria-label="Slide 2"></button>
                 </div>
             </div>
         </div>
@@ -316,7 +1014,8 @@
                         <h5 class="footer-heading">Recent Posts</h5>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> August 6, 2024
@@ -326,7 +1025,8 @@
                         </div>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> July 4, 2024
@@ -357,20 +1057,20 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Smooth scroll and active link highlighting -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Update active link on scroll
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                
+
                 // Add your logic to determine which link should be active
                 // This is a simplified version - you'll need to implement
                 // your own logic based on your page sections
@@ -379,4 +1079,5 @@
         });
     </script>
 </body>
+
 </html>
