@@ -162,7 +162,9 @@ body {
 .carousel-item {
     height: 85vh;
 }
-
+.carousel-item1 {
+    height: 50vh;
+}
 .overlay {
     position: absolute;
     top: 0;
