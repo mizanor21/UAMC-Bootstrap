@@ -64,8 +64,7 @@
                 Navbar Start
     ------------------------------- -->
 
-    <!-- Top information bar -->
-     <!-- NavTop Component -->
+    <!-- NavTop Component -->
     <nav class="navbar-top py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -101,9 +100,10 @@
             </div>
         </div>
     </nav>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="z-index: 1000;">
-        <div class="container">
+    
+    <!-- Main Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+        <div class="container navbar-container bg-white rounded-2">
             <!-- Brand Logo -->
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="/assets/logo/logo.png" alt="UAMC" class="me-2">
@@ -165,7 +165,6 @@
                         </ul>
                     </li>
                     
-                    
                     <!-- Admission Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/admission-procedure.html">ADMISSION</a>
@@ -179,6 +178,11 @@
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
+                    </li>
+
+                    <!-- Contact Us Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">CONTACT US</a>
                     </li>
                 </ul>
             </div>
@@ -1912,38 +1916,50 @@
             buttons[event.to].classList.add('active');
         });
     </script>
-    <!-- Custom JavaScript for tab functionality -->
+    <!-- Custom JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all navigation items
-            const navItems = document.querySelectorAll('.facility-nav-item');
-
-            // Add click event to each navigation item
-            navItems.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    // Remove active class from all navigation items
-                    navItems.forEach(function (nav) {
-                        nav.classList.remove('active');
-                    });
-
-                    // Add active class to clicked navigation item
-                    this.classList.add('active');
-
-                    // Get the target content id
-                    const targetId = this.getAttribute('data-target');
-
-                    // Get all content sections
-                    const contentSections = document.querySelectorAll('.facility-content');
-
-                    // Hide all content sections
-                    contentSections.forEach(function (section) {
-                        section.classList.remove('active');
-                    });
-
-                    // Show the target content section
-                    document.getElementById(targetId + '-content').classList.add('active');
-                });
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarTop = document.querySelector('.navbar-top');
+            const mainNavbar = document.querySelector('.main-navbar');
+            const navbarContainer = document.querySelector('.navbar-container');
+            let lastScrollTop = 0;
+            
+            // Set initial body padding
+            document.body.style.paddingTop = (navbarTop.offsetHeight + mainNavbar.offsetHeight) + 'px';
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Handle navbar transition
+                if (scrollTop > 50) {
+                    navbarTop.classList.add('hidden');
+                    mainNavbar.classList.add('scrolled');
+                    navbarContainer.classList.add('scrolled');
+                    document.body.style.paddingTop = mainNavbar.offsetHeight + 'px';
+                } else {
+                    navbarTop.classList.remove('hidden');
+                    mainNavbar.classList.remove('scrolled');
+                    navbarContainer.classList.remove('scrolled');
+                    document.body.style.paddingTop = (navbarTop.offsetHeight + mainNavbar.offsetHeight) + 'px';
+                }
+                
+                lastScrollTop = scrollTop;
             });
+            
+            // Handle dropdown on hover for desktop
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            if (window.innerWidth >= 992) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('mouseenter', function() {
+                        this.querySelector('.dropdown-toggle').click();
+                    });
+                    
+                    dropdown.addEventListener('mouseleave', function() {
+                        this.querySelector('.dropdown-toggle').click();
+                    });
+                });
+            }
         });
     </script>
 </body>
