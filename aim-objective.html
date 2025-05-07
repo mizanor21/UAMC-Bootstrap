@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="/styles/about/aim-objective.css">
+    <link rel="stylesheet" href="/styles/about/aim-objective.css">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.85);
@@ -19,12 +21,12 @@
             --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             --primary-color: #0d6efd;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
-        
+
         .navbar {
             background: var(--glass-bg) !important;
             backdrop-filter: blur(10px);
@@ -33,17 +35,17 @@
             box-shadow: var(--glass-shadow);
             transition: all 0.3s ease;
         }
-        
+
         .navbar-brand h5 {
             font-weight: 700;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
             margin-bottom: 0.2rem;
         }
-        
+
         .navbar-brand small {
             font-size: clamp(0.7rem, 1vw, 0.85rem);
         }
-        
+
         .nav-link {
             font-weight: 500;
             font-size: clamp(0.85rem, 1.1vw, 1rem);
@@ -51,18 +53,19 @@
             color: #333 !important;
             transition: all 0.2s ease;
         }
-        
-        .nav-link:hover, .nav-link:focus {
+
+        .nav-link:hover,
+        .nav-link:focus {
             color: var(--primary-color) !important;
             transform: translateY(-2px);
         }
-        
+
         .nav-link.active {
             color: var(--primary-color) !important;
             font-weight: 600;
             position: relative;
         }
-        
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -73,7 +76,7 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
+
         .dropdown-menu {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -84,27 +87,28 @@
             overflow: hidden;
             min-width: 220px;
         }
-        
+
         .dropdown-item {
             font-size: clamp(0.8rem, 1vw, 0.9rem);
             padding: 0.65rem 1.25rem;
             transition: all 0.2s ease;
         }
-        
-        .dropdown-item:hover, .dropdown-item:focus {
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
             background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.2));
             color: var(--primary-color) !important;
             transform: translateX(5px);
         }
-        
+
         .dropdown-toggle::after {
             transition: transform 0.2s ease;
         }
-        
-        .show > .dropdown-toggle::after {
+
+        .show>.dropdown-toggle::after {
             transform: rotate(-180deg);
         }
-        
+
         /* Mobile adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
@@ -116,19 +120,19 @@
                 margin-top: 0.5rem;
                 box-shadow: var(--glass-shadow);
             }
-            
+
             .dropdown-menu {
                 background: rgba(255, 255, 255, 0.95);
                 margin-left: 1rem;
                 border-left: 3px solid var(--primary-color);
                 box-shadow: none;
             }
-            
+
             .nav-link {
                 padding: 0.5rem 0 !important;
             }
         }
-        
+
         /* Logo sizing */
         .navbar-brand img {
             width: clamp(50px, 5vw, 60px);
@@ -202,63 +206,107 @@
             margin-bottom: 20px;
             margin-top: 40px;
         }
+
         .eligibility-section {
             margin-bottom: 10px;
         }
+
         .eligibility-title {
             font-weight: 600;
             color: #555;
             margin-bottom: 5px;
         }
+
         .eligibility-text {
             color: #666;
             margin-bottom: 15px;
         }
+
         .selection-section {
             margin-bottom: 15px;
         }
+
         .selection-title {
             font-weight: 600;
             margin-bottom: 10px;
         }
+
         ul.admission-list {
             padding-left: 20px;
         }
+
         ul.admission-list li {
             margin-bottom: 8px;
             position: relative;
         }
+
         .fee-table {
             border: 1px solid #e0e0e0;
             margin-bottom: 30px;
         }
+
         .fee-table th {
             background-color: #f0f7f3;
             color: #444;
         }
+
         .fee-note {
             border-left: 4px solid #0e8a3e;
             padding: 10px 15px;
             background-color: #f9f9f9;
             margin-bottom: 30px;
         }
+
         .contact-info {
             background-color: #f8f9fa;
             padding: 20px;
             border-radius: 5px;
         }
+
         .address-icon {
             color: #0e8a3e;
             margin-right: 8px;
         }
+
         .important-note {
             border-left: 4px solid #0e8a3e;
             padding: 10px 15px;
             background-color: #f9f9f9;
             margin: 20px 0;
         }
+
+        /* Admission Procedure Section */
+        .section-title {
+            color: #0a8043;
+            font-weight: 600;
+            margin-bottom: 15px;
+            /* border-bottom: 1px solid #0a8043; */
+            padding-bottom: 8px;
+        }
+
+        .content-box {
+            padding: 20px;
+            height: 100%;
+        }
+
+        .content-box ul {
+            padding-left: 20px;
+        }
+
+        .content-box li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        @media (max-width: 767px) {
+            .section-row {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -271,13 +319,13 @@
                     <small>Medical College (UAMC)</small>
                 </div>
             </a>
-            
+
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -285,11 +333,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    
+
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             ABOUT UAMC
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -297,24 +345,26 @@
                             <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
                             <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
                             <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
-                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
                             <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
                             <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
                             <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Facilities Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="facilitiesDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                           Facilities
+                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="facilitiesDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Facilities
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="facilitiesDropdown">
                             <li><a class="dropdown-item" href="/hospital-services.html">Hospital Services</a></li>
                             <li><a class="dropdown-item" href="/departments.html">Departments</a></li>
                             <li><a class="dropdown-item" href="/library.html">Library</a></li>
-                            <li><a class="dropdown-item" href="/medical-education-unit.html">Medical Education Unit</a></li>
+                            <li><a class="dropdown-item" href="/medical-education-unit.html">Medical Education Unit</a>
+                            </li>
                             <li><a class="dropdown-item" href="/training.html">Training</a></li>
                             <li><a class="dropdown-item" href="/publication.html">Publications</a></li>
                             <li><a class="dropdown-item" href="/seminar.html">Seminar</a></li>
@@ -323,17 +373,17 @@
                             <li><a class="dropdown-item" href="/cafeteria.html">Cafeteria</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Admission Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/admission">ADMISSION</a>
                     </li>
-                    
+
                     <!-- Notice & Media Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">NOTICE & MEDIA</a>
                     </li>
-                    
+
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
@@ -348,20 +398,20 @@
         <div class="banner-overlay ">
             <div class="container">
                 <div class="row align-items-end">
-                  <div class="col-md-8 mb-md-0">
-                    <p class="breadcrumb-text">
-                        <a href="/" class="text-decoration-none text-secondary ">Home</a> 
-                        <span class="text-muted">&gt;</span> 
-                        <span class="text-primary">Aim & Objective</span>
-                    </p>
-                    <h1 class="banner-title">About UAMC</h1>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
-                    <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
-                  </div>
+                    <div class="col-md-8 mb-md-0">
+                        <p class="breadcrumb-text">
+                            <a href="/" class="text-decoration-none text-secondary ">Home</a>
+                            <span class="text-muted">&gt;</span>
+                            <span class="text-primary">Aim & Objective</span>
+                        </p>
+                        <h1 class="banner-title">About UAMC</h1>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
+                        <img src="/assets/logo/logo.png" class="logo-img d-none d-md-block" alt="UAMC logo">
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
         </div>
     </div>
 
@@ -423,6 +473,85 @@
             </div>
         </div>
     </div>
+
+    <!-- Admission Procedure Section -->
+     <div class="" style="background-color: #cff5e1">
+
+         <div class="container py-5" >
+             <!-- Top Row -->
+             <div class="row section-row mb-4">
+                 <!-- Academic Excellence -->
+                 <div class="col-md-4 mb-4 mb-md-0">
+                     <div class="content-box">
+                         <h2 class="section-title">Academic Excellence</h2>
+                         <ul>
+                             <li>Deliver a comprehensive MBBS curriculum aligned with Bangladesh Medical & Dental Council
+                                 (BMDC) and Dhaka University (DU) guidelines.</li>
+                             <li>Equip students with a deep understanding of medical sciences, human anatomy, disease
+                                 mechanisms, and healthcare practices.</li>
+                         </ul>
+                     </div>
+                 </div>
+     
+                 <!-- Clinical & Professional Skills Development -->
+                 <div class="col-md-4 mb-4 mb-md-0">
+                     <div class="content-box">
+                         <h2 class="section-title">Clinical & Professional Skills Development</h2>
+                         <ul>
+                             <li>Train students in patient history-taking, clinical examinations, and emergency management.
+                             </li>
+                             <li>Ensure proficiency in diagnostic procedures, laboratory investigations, and therapeutic
+                                 decision-making.</li>
+                             <li>Promote effective communication skills for patient care and interprofessional collaboration.
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+     
+                 <!-- Ethical & Holistic Medical Practice -->
+                 <div class="col-md-4">
+                     <div class="content-box">
+                         <h2 class="section-title">Ethical & Holistic Medical Practice</h2>
+                         <ul>
+                             <li>Instill a strong sense of medical ethics, integrity, and responsibility towards patient
+                                 welfare.</li>
+                             <li>Encourage a humanitarian approach in medical practice by blending scientific knowledge with
+                                 empathy.</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+     
+             <!-- Bottom Row -->
+             <div class="row section-row">
+                 <!-- Research & Continuous Learning -->
+                 <div class="col-md-6 mb-4 mb-md-0">
+                     <div class="content-box">
+                         <h2 class="section-title">Research & Continuous Learning</h2>
+                         <ul>
+                             <li>Foster critical thinking, research skills, and evidence-based medical practice.</li>
+                             <li>Cultivate a lifelong learning mindset to adapt to evolving medical advancements and
+                                 healthcare needs.</li>
+                         </ul>
+                     </div>
+                 </div>
+     
+                 <!-- Community Health & Global Standards -->
+                 <div class="col-md-6">
+                     <div class="content-box">
+                         <h2 class="section-title">Community Health & Global Standards</h2>
+                         <ul>
+                             <li>Enhance healthcare accessibility by training graduates to serve diverse populations,
+                                 particularly in underserved regions.</li>
+                             <li>Align education and healthcare practices with international standards to prepare graduates
+                                 for global medical opportunities.</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
 
     <!-- -------------------------------
             UAMC Admission Start
@@ -528,7 +657,8 @@
                         <h5 class="footer-heading">Recent Posts</h5>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> August 6, 2024
@@ -538,7 +668,8 @@
                         </div>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> July 4, 2024
@@ -569,20 +700,20 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Smooth scroll and active link highlighting -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Update active link on scroll
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                
+
                 // Add your logic to determine which link should be active
                 // This is a simplified version - you'll need to implement
                 // your own logic based on your page sections
@@ -591,4 +722,5 @@
         });
     </script>
 </body>
+
 </html>
