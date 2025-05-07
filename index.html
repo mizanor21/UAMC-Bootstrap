@@ -30,27 +30,27 @@
             border-radius: 4px;
             transition: all 0.5s;
         }
-        
+
         .social-icon:hover {
             background: transparent;
             color: #3c7a39;
         }
-        
+
         .navbar-top {
             display: none;
         }
-        
+
         .nav-link-custom {
             color: #212529;
             text-transform: uppercase;
             font-size: 15px;
             transition: color 0.3s;
         }
-        
+
         .nav-link-custom:hover {
             color: #3a57e8;
         }
-        
+
         @media (min-width: 768px) {
             .navbar-top {
                 display: flex;
@@ -82,25 +82,29 @@
                         <span class="nav-link-custom">Events</span>
                     </a>
                 </div>
-                
+
                 <div class="d-flex gap-3">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow us on Facebook">
                         <i class="fab fa-facebook-f social-icon"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow us on LinkedIn">
                         <i class="fab fa-linkedin-in social-icon"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow us on Twitter">
                         <i class="fab fa-twitter social-icon"></i>
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on YouTube">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow us on YouTube">
                         <i class="fab fa-youtube social-icon"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <!-- Main Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light main-navbar">
         <div class="container navbar-container bg-white rounded-2">
@@ -112,13 +116,13 @@
                     <small>Medical College (UAMC)</small>
                 </div>
             </a>
-            
+
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -126,11 +130,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">HOME</a>
                     </li>
-                    
+
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             ABOUT UAMC
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -138,7 +142,8 @@
                             <li><a class="dropdown-item" href="/history-uamc.html">History of UAMC</a></li>
                             <li><a class="dropdown-item" href="/vission-mission.html">Vision & Mission</a></li>
                             <li><a class="dropdown-item" href="/aim-objective.html">Aim & Objective</a></li>
-                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational Structure</a></li>
+                            <li><a class="dropdown-item" href="/organizational-structure.html">Organizational
+                                    Structure</a></li>
                             <li><a class="dropdown-item" href="/founder-members.html">Founder Members</a></li>
                             <li><a class="dropdown-item" href="/ec-members.html">EC Members</a></li>
                             <li><a class="dropdown-item" href="/gb-members.html">GB Members</a></li>
@@ -147,15 +152,16 @@
 
                     <!-- Facilities Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="facilitiesDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                           Facilities
+                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="facilitiesDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Facilities
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="facilitiesDropdown">
                             <li><a class="dropdown-item" href="/hospital-services.html">Hospital Services</a></li>
                             <li><a class="dropdown-item" href="/departments.html">Departments</a></li>
                             <li><a class="dropdown-item" href="/library.html">Library</a></li>
-                            <li><a class="dropdown-item" href="/medical-education-unit.html">Medical Education Unit</a></li>
+                            <li><a class="dropdown-item" href="/medical-education-unit.html">Medical Education Unit</a>
+                            </li>
                             <li><a class="dropdown-item" href="/training.html">Training</a></li>
                             <li><a class="dropdown-item" href="/publication.html">Publications</a></li>
                             <li><a class="dropdown-item" href="/seminar.html">Seminar</a></li>
@@ -164,17 +170,27 @@
                             <li><a class="dropdown-item" href="/cafeteria.html">Cafeteria</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Admission Link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admission-procedure.html">ADMISSION</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="admissionDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admission
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+                            <li><a class="dropdown-item" href="/admission-procedure.html">Admission Procedure</a></li>
+                            <li><a class="dropdown-item" href="/admission-papers.html">Admission Papers</a></li>
+                            <li><a class="dropdown-item" href="/admission-form.html">Admission Form</a></li>
+                            <li><a class="dropdown-item" href="/admission-result.html">Admission Result</a></li>
+                            <li><a class="dropdown-item" href="#">Online Registration</a></li>
+                        </ul>
                     </li>
-                    
+
                     <!-- Notice & Media Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/notice-media.html">NOTICE & MEDIA</a>
                     </li>
-                    
+
                     <!-- Career Link -->
                     <li class="nav-item">
                         <a class="nav-link" href="/career">CAREER</a>
@@ -1565,7 +1581,8 @@
                         Read Our Latest News
                     </h2>
                     <a href="#" class="text-success d-flex align-items-center text-decoration-none fw-semibold">
-                        View All <i class="fa-solid fa-arrow-right-long ms-2 fs-5" style="transform: rotate(-45deg);"></i>
+                        View All <i class="fa-solid fa-arrow-right-long ms-2 fs-5"
+                            style="transform: rotate(-45deg);"></i>
                     </a>
                 </div>
                 <p class="text-secondary">
@@ -1663,126 +1680,126 @@
             Student Feedback Start
     ------------------------------- -->
     <div class="bg-light py-5" style="max-height: 200px;"></div>
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold display-5 text-success">My Students Feedback</h2>
-                <p class="text-secondary mt-4">You'll find something to spark your curiosity and enhance</p>
-            </div>
-    
-            <!-- Carousel -->
-            <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- First page -->
-                    <div class=" active">
-                        <div class="row g-4">
-                            <!-- Feedback 1 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100 shadow-sm p-4">
-                                    <div class="mb-3">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5 text-success">My Students Feedback</h2>
+            <p class="text-secondary mt-4">You'll find something to spark your curiosity and enhance</p>
+        </div>
+
+        <!-- Carousel -->
+        <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First page -->
+                <div class=" active">
+                    <div class="row g-4">
+                        <!-- Feedback 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm p-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                    random text. It has roots in classical Latin literature from 45 BC, making it
+                                    over 2000 years old.</p>
+
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/api/placeholder/48/48" alt="Emma Elizabeth"
+                                            class="rounded-circle border border-2 border-success" width="48"
+                                            height="48">
+                                        <div class="ms-3">
+                                            <h5 class="mb-0 text-success">Emma Elizabeth</h5>
+                                            <small class="text-dark">Assistant Teacher</small>
+                                        </div>
                                     </div>
-                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
-                                        random text. It has roots in classical Latin literature from 45 BC, making it
-                                        over 2000 years old.</p>
-    
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/api/placeholder/48/48" alt="Emma Elizabeth"
-                                                class="rounded-circle border border-2 border-success" width="48"
-                                                height="48">
-                                            <div class="ms-3">
-                                                <h5 class="mb-0 text-success">Emma Elizabeth</h5>
-                                                <small class="text-dark">Assistant Teacher</small>
-                                            </div>
-                                        </div>
-                                        <div class="text-success">
-                                            <i class="fas fa-quote-right fs-2"></i>
-                                        </div>
+                                    <div class="text-success">
+                                        <i class="fas fa-quote-right fs-2"></i>
                                     </div>
                                 </div>
                             </div>
-    
-                            <!-- Feedback 2 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100 shadow-sm p-4">
-                                    <div class="mb-3">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
+                        </div>
+
+                        <!-- Feedback 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm p-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                    random text. It has roots in classical Latin literature from 45 BC, making it
+                                    over 2000 years old.</p>
+
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/api/placeholder/48/48" alt="Zent Ekizie"
+                                            class="rounded-circle border border-2 border-success" width="48"
+                                            height="48">
+                                        <div class="ms-3">
+                                            <h5 class="mb-0 text-success">Zent Ekizie</h5>
+                                            <small class="text-dark">Assistant Teacher</small>
+                                        </div>
                                     </div>
-                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
-                                        random text. It has roots in classical Latin literature from 45 BC, making it
-                                        over 2000 years old.</p>
-    
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/api/placeholder/48/48" alt="Zent Ekizie"
-                                                class="rounded-circle border border-2 border-success" width="48"
-                                                height="48">
-                                            <div class="ms-3">
-                                                <h5 class="mb-0 text-success">Zent Ekizie</h5>
-                                                <small class="text-dark">Assistant Teacher</small>
-                                            </div>
-                                        </div>
-                                        <div class="text-success">
-                                            <i class="fas fa-quote-right fs-2"></i>
-                                        </div>
+                                    <div class="text-success">
+                                        <i class="fas fa-quote-right fs-2"></i>
                                     </div>
                                 </div>
                             </div>
-    
-                            <!-- Feedback 3 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100 shadow-sm p-4">
-                                    <div class="mb-3">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
+                        </div>
+
+                        <!-- Feedback 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm p-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
+                                    random text. It has roots in classical Latin literature from 45 BC, making it
+                                    over 2000 years old.</p>
+
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/api/placeholder/48/48" alt="Samantha Willow"
+                                            class="rounded-circle border border-2 border-success" width="48"
+                                            height="48">
+                                        <div class="ms-3">
+                                            <h5 class="mb-0 text-success">Samantha Willow</h5>
+                                            <small class="text-dark">Teacher</small>
+                                        </div>
                                     </div>
-                                    <p class="text-dark mb-4">Contrary to popular belief, Lorem Ipsum is not simply
-                                        random text. It has roots in classical Latin literature from 45 BC, making it
-                                        over 2000 years old.</p>
-    
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/api/placeholder/48/48" alt="Samantha Willow"
-                                                class="rounded-circle border border-2 border-success" width="48"
-                                                height="48">
-                                            <div class="ms-3">
-                                                <h5 class="mb-0 text-success">Samantha Willow</h5>
-                                                <small class="text-dark">Teacher</small>
-                                            </div>
-                                        </div>
-                                        <div class="text-success">
-                                            <i class="fas fa-quote-right fs-2"></i>
-                                        </div>
+                                    <div class="text-success">
+                                        <i class="fas fa-quote-right fs-2"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <!-- Carousel indicators -->
-                <div class="text-center mt-4 mb-5">
-                    <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0"
-                        class="btn btn-sm btn-warning rounded-circle mx-1 active" aria-current="true"
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1"
-                        class="btn btn-sm btn-secondary rounded-circle mx-1" aria-label="Slide 2"></button>
-                </div>
+            </div>
+
+            <!-- Carousel indicators -->
+            <div class="text-center mt-4 mb-5">
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0"
+                    class="btn btn-sm btn-warning rounded-circle mx-1 active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1"
+                    class="btn btn-sm btn-secondary rounded-circle mx-1" aria-label="Slide 2"></button>
             </div>
         </div>
     </div>
-    
+    </div>
+
 
 
     <!-- -------------------------------
@@ -1855,7 +1872,8 @@
                         <h5 class="footer-heading">Recent Posts</h5>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/YCFdGf2v/Component-13.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> August 6, 2024
@@ -1865,7 +1883,8 @@
                         </div>
 
                         <div class="recent-post">
-                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image" class="post-image">
+                            <img src="https://i.postimg.cc/brFmbm2t/frame-522-1x-280x280-webp.png" alt="Post Image"
+                                class="post-image">
                             <div class="post-content">
                                 <div class="post-date">
                                     <i class="far fa-calendar me-1"></i> July 4, 2024
@@ -1918,18 +1937,18 @@
     </script>
     <!-- Custom JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navbarTop = document.querySelector('.navbar-top');
             const mainNavbar = document.querySelector('.main-navbar');
             const navbarContainer = document.querySelector('.navbar-container');
             let lastScrollTop = 0;
-            
+
             // Set initial body padding
             document.body.style.paddingTop = (navbarTop.offsetHeight + mainNavbar.offsetHeight) + 'px';
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
+
                 // Handle navbar transition
                 if (scrollTop > 50) {
                     navbarTop.classList.add('hidden');
@@ -1942,20 +1961,20 @@
                     navbarContainer.classList.remove('scrolled');
                     document.body.style.paddingTop = (navbarTop.offsetHeight + mainNavbar.offsetHeight) + 'px';
                 }
-                
+
                 lastScrollTop = scrollTop;
             });
-            
+
             // Handle dropdown on hover for desktop
             const dropdowns = document.querySelectorAll('.dropdown');
-            
+
             if (window.innerWidth >= 992) {
                 dropdowns.forEach(dropdown => {
-                    dropdown.addEventListener('mouseenter', function() {
+                    dropdown.addEventListener('mouseenter', function () {
                         this.querySelector('.dropdown-toggle').click();
                     });
-                    
-                    dropdown.addEventListener('mouseleave', function() {
+
+                    dropdown.addEventListener('mouseleave', function () {
                         this.querySelector('.dropdown-toggle').click();
                     });
                 });
