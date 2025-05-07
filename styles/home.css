@@ -448,7 +448,7 @@ body {
     }
 }
 
-/* notice section  */
+/* notice section */
 .tab-container {
     background-color: #f0f1f7;
     border-radius: 8px;
@@ -459,6 +459,7 @@ body {
     border: none;
     padding: 12px 20px;
     border-radius: 0;
+    cursor: pointer;
 }
 
 .custom-tab.active {
@@ -503,6 +504,24 @@ body {
     font-size: 32px;
 }
 
+.notice-list, .publication-list {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 8px;
+     /* Hide scrollbar for Chrome, Safari and Opera */
+     scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide content by default */
+.tab-content {
+    display: none;
+}
+
+/* Show active tab content */
+.tab-content.active {
+    display: block;
+}
 /* about uamc */
 .text-highlight {
     color: #FFB400;

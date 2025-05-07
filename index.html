@@ -395,116 +395,283 @@
                 <!-- Tabs -->
                 <div class="tab-container mb-4">
                     <div class="d-flex flex-wrap">
-                        <button class="custom-tab active">General Notice</button>
-                        <button class="custom-tab">Admission Notice</button>
-                        <button class="custom-tab">Reports</button>
-                        <button class="custom-tab">Job Circular</button>
+                        <button class="custom-tab active" data-tab="general-notice">General Notice</button>
+                        <button class="custom-tab" data-tab="admission-notice">Admission Notice</button>
+                        <button class="custom-tab" data-tab="reports">Reports</button>
+                        <button class="custom-tab" data-tab="job-circular">Job Circular</button>
                     </div>
                 </div>
 
                 <!-- Notice Items -->
                 <div class="notice-list">
-                    <!-- Notice Item 1 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
+                    <!-- General Notice Tab Content -->
+                    <div id="general-notice" class="tab-content active">
+                        <!-- Notice Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">12</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    3:40 PM
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+
+                        <!-- Notice Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">12</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    3:40 PM
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice Item 3 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">12</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    3:40 PM
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice Item 4 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">12</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    3:40 PM
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice Item 5 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">12</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    3:40 PM
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Notice Item 2 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
+                    <!-- Admission Notice Tab Content -->
+                    <div id="admission-notice" class="tab-content">
+                        <!-- Notice Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">15</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Admission Open for FCPS Part II Training Program 2025"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    2:30 PM
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+
+                        <!-- Notice Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">15</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Admission Open for FCPS Part II Training Program 2025"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    2:30 PM
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice Item 3 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">15</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Admission Open for FCPS Part II Training Program 2025"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    2:30 PM
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Notice Item 3 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
+                    <!-- Reports Tab Content -->
+                    <div id="reports" class="tab-content">
+                        <!-- Notice Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">18</div>
+                                <div class="date-badge">May 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Annual Medical Research Findings Report 2024-2025"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    10:15 AM
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+
+                        <!-- Notice Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">18</div>
+                                <div class="date-badge">May 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Annual Medical Research Findings Report 2024-2025"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    10:15 AM
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Notice Item 4 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+                    <!-- Job Circular Tab Content -->
+                    <div id="job-circular" class="tab-content">
+                        <!-- Notice Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">22</div>
+                                <div class="date-badge">Jun 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Vacancy Announcement: Medical Officers for Rural Health Centers"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    9:00 AM
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Notice Item 5 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
+                        <!-- Notice Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">22</div>
+                                <div class="date-badge">Jun 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Vacancy Announcement: Medical Officers for Rural Health Centers"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    9:00 AM
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+
+                        <!-- Notice Item 3 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">22</div>
+                                <div class="date-badge">Jun 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Vacancy Announcement: Medical Officers for Rural Health Centers"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    9:00 AM
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -528,114 +695,155 @@
                 <!-- Tabs -->
                 <div class="tab-container mb-4">
                     <div class="d-flex">
-                        <button class="custom-tab active">Journal</button>
-                        <button class="custom-tab">Tenders</button>
+                        <button class="custom-tab active" data-tab="journal">Journal</button>
+                        <button class="custom-tab" data-tab="tenders">Tenders</button>
                     </div>
                 </div>
 
                 <!-- Publication Items -->
                 <div class="publication-list">
-                    <!-- Publication Item 1 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
+                    <!-- Journal Tab Content -->
+                    <div id="journal" class="tab-content active">
+                        <!-- Publication Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">10</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Journal of Medical Sciences: Volume 45, Issue 3 Published"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    1:15 PM
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+
+                        <!-- Publication Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">10</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Journal of Medical Sciences: Volume 45, Issue 3 Published"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    1:15 PM
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 3 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">10</div>
+                                <div class="date-badge">Mar 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Journal of Medical Sciences: Volume 45, Issue 3 Published"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    1:15 PM
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Publication Item 2 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+                    <!-- Tenders Tab Content -->
+                    <div id="tenders" class="tab-content">
+                        <!-- Publication Item 1 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">20</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Tender Notice: Supply of Medical Equipment for Teaching Hospitals"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    11:30 AM
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Publication Item 3 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+                        <!-- Publication Item 2 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">20</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Tender Notice: Supply of Medical Equipment for Teaching Hospitals"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    11:30 AM
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Publication Item 4 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+                        <!-- Publication Item 3 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">20</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Tender Notice: Supply of Medical Equipment for Teaching Hospitals"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    11:30 AM
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Publication Item 5 -->
-                    <div class="notice-item d-flex">
-                        <div class="me-3">
-                            <div class="day-number">12</div>
-                            <div class="date-badge">Mar 25</div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"
-                            </h5>
-                            <div class="d-flex align-items-center text-secondary small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-clock me-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                </svg>
-                                3:40 PM
+                        <!-- Publication Item 4 -->
+                        <div class="notice-item d-flex">
+                            <div class="me-3">
+                                <div class="day-number">20</div>
+                                <div class="date-badge">Apr 25</div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">"Tender Notice: Supply of Medical Equipment for Teaching Hospitals"</h5>
+                                <div class="d-flex align-items-center text-secondary small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clock me-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                    11:30 AM
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -643,6 +851,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- -------------------------------
                 About UAMC Start
@@ -1980,6 +2189,61 @@
                     });
                 });
             }
+        });
+    </script>
+     <script>
+        // Tab functionality for Notice Board
+        document.querySelectorAll('.notice-board .custom-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.notice-board .custom-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.notice-board .tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Tab functionality for Publication
+        document.querySelectorAll('.publication-section .custom-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.publication-section .custom-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.publication-section .tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Alternative simpler implementation that works for both sections
+        document.querySelectorAll('.custom-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Get the parent tab container
+                const tabContainer = this.closest('.tab-container');
+                
+                // Remove active class from all tabs in this container
+                tabContainer.querySelectorAll('.custom-tab').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Get the tab content ID
+                const tabId = this.getAttribute('data-tab');
+                
+                // Find the nearest notice-list or publication-list parent
+                const listContainer = tabContainer.nextElementSibling;
+                
+                // Remove active class from all tab contents in this container
+                listContainer.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to corresponding tab content
+                document.getElementById(tabId).classList.add('active');
+            });
         });
     </script>
 </body>
