@@ -807,7 +807,7 @@ body {
 }
 
 .facility-content.active {
-    display: flex;
+    display: block;
 }
 
 .btn-details {
