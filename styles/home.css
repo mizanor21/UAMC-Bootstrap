@@ -435,6 +435,17 @@ body {
 }
 
 @media (max-width: 992px) {
+    .hero-slider {
+        height: 40vh;
+    }
+    
+    .carousel-item {
+        height: 40vh;
+    }
+    
+    .carousel-item1 {
+        height: 40vh;
+    }
     .degree-section {
         display: none;
     }
